@@ -397,7 +397,7 @@ Wire Wire Line
 Text Label 3150 3250 2    50   ~ 0
 SD_CS
 Text Label 3150 3050 2    50   ~ 0
-SD_SCK
+SCK
 Text Label 3150 3150 2    50   ~ 0
 MOSI
 Text Label 3150 3550 2    50   ~ 0
@@ -417,7 +417,7 @@ MOSI
 Text Label 6500 2200 2    50   ~ 0
 MISO
 Text Label 6500 2300 2    50   ~ 0
-SD_SCK
+SCK
 Wire Wire Line
 	1800 2700 1900 2700
 $Comp
@@ -753,11 +753,11 @@ Wire Wire Line
 Wire Wire Line
 	9900 3200 9550 3200
 Text Label 9550 3000 0    50   ~ 0
-PB4(MISO)
+MISO
 Text Label 9550 3100 0    50   ~ 0
-PB3(MOSI)
+MOSI
 Text Label 9550 3200 0    50   ~ 0
-PB5(SCK)
+SCK
 $Comp
 L Device:R R?
 U 1 1 5CA2A4C1
@@ -1239,7 +1239,7 @@ U 1 1 5CA47DE3
 P 2000 3450
 F 0 "XS1" H 1670 3596 50  0000 R CNN
 F 1 "uSD-push_push_SMD" H 1670 3505 50  0000 R CNN
-F 2 "kicad_libraries:uSDcard" H 2000 3450 10  0001 C CNN
+F 2 "kicad_libraries:Conn_uSDcard" H 2000 3450 10  0001 C CNN
 F 3 "" H 2000 3450 10  0001 C CNN
 F 4 "_" H 2000 3450 10  0001 C CNN "Manf#"
 F 5 "ebay" H 2000 3450 10  0001 C CNN "Manf"

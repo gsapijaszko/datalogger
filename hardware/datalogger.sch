@@ -260,7 +260,7 @@ U 1 1 5C340BC0
 P 2350 4750
 F 0 "BT1" H 2600 4850 50  0000 C CNN
 F 1 "3V" H 2600 4750 50  0000 C CNN
-F 2 "Battery:BatteryHolder_Keystone_500" V 2350 4810 50  0001 C CNN
+F 2 "kicad_libraries:1220 Battery Holder, SMD" V 2350 4810 50  0001 C CNN
 F 3 "~" V 2350 4810 50  0001 C CNN
 	1    2350 4750
 	1    0    0    -1  
@@ -397,7 +397,7 @@ Wire Wire Line
 Text Label 3150 3250 2    50   ~ 0
 SD_CS
 Text Label 3150 3050 2    50   ~ 0
-SD_SCK
+SCK
 Text Label 3150 3150 2    50   ~ 0
 MOSI
 Text Label 3150 3550 2    50   ~ 0
@@ -417,7 +417,7 @@ MOSI
 Text Label 6500 2200 2    50   ~ 0
 MISO
 Text Label 6500 2300 2    50   ~ 0
-SD_SCK
+SCK
 Wire Wire Line
 	1800 2700 1900 2700
 $Comp
@@ -753,11 +753,11 @@ Wire Wire Line
 Wire Wire Line
 	9900 3200 9550 3200
 Text Label 9550 3000 0    50   ~ 0
-PB4(MISO)
+MISO
 Text Label 9550 3100 0    50   ~ 0
-PB3(MOSI)
+MOSI
 Text Label 9550 3200 0    50   ~ 0
-PB5(SCK)
+SCK
 $Comp
 L Device:R R?
 U 1 1 5CA2A4C1
