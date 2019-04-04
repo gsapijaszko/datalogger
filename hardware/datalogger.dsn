@@ -1,0 +1,1724 @@
+(pcb C:\projekty\datalogger\hardware\datalogger.dsn
+  (parser
+    (string_quote ")
+    (space_in_quoted_tokens on)
+    (host_cad "KiCad's Pcbnew")
+    (host_version "(6.0.0-rc1-dev-1491-g0a4812be0)")
+  )
+  (resolution um 10)
+  (unit um)
+  (structure
+    (layer F.Cu
+      (type signal)
+      (property
+        (index 0)
+      )
+    )
+    (layer B.Cu
+      (type signal)
+      (property
+        (index 1)
+      )
+    )
+    (boundary
+      (path pcb 0  160000 -120000  90000 -120000  90000 -50000  160000 -50000
+            160000 -120000)
+    )
+    (via "Via[0-1]_800:400_um")
+    (rule
+      (width 279.4)
+      (clearance 200.1)
+      (clearance 200.1 (type default_smd))
+      (clearance 50 (type smd_smd))
+    )
+  )
+  (placement
+    (component "kicad_libraries:1220 Battery Holder, SMD"
+      (place BT1 148590 -80772 front 0 (PN 3V))
+    )
+    (component kicad_libraries:Conn_uSDcard
+      (place XS1 155448 -101981 front 90 (PN "uSD-push_push_SMD"))
+    )
+    (component "Connector_USB:USB_Micro-B_Wuerth_629105150521"
+      (place J6 93853 -73279 front 270 (PN USB_B_Mini))
+    )
+    (component "Package_SO:MSOP-10-1EP_3x3mm_P0.5mm_EP1.68x1.88mm"
+      (place U8 104521 -63246 front 90 (PN LTC3105))
+    )
+    (component Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder
+      (place R25 130603 -86412 front 90 (PN 100k))
+      (place R24 134112 -73787 front 0 (PN 200k))
+      (place R23 108331 -68072 front 0 (PN 40k2))
+      (place C24 98425 -59436 front 180 (PN 10uF))
+      (place C20 108331 -62738 front 270 (PN 10uF))
+      (place R22 92583 -64516 front 90 (PN 332k))
+      (place R21 126793 -86412 front 270 (PN 330k))
+      (place R20 134112 -66040 front 180 (PN 15k))
+      (place R19 133270 -82475 front 0 (PN 100k))
+      (place R18 96393 -64516 front 270 (PN 1.02M))
+      (place R17 125476 -64008 front 90 (PN 340k))
+      (place R16 127301 -78157 front 0 (PN 10k))
+      (place R14 109220 -87884 front 270 (PN 1k2))
+      (place R11 113030 -87884 front 270 (PN 2k7))
+      (place R9 121412 -74168 front 180 (PN 100))
+      (place R3 151130 -58674 front 90 (PN 10k))
+      (place C23 129540 -70993 front 270 (PN 4.7uF))
+      (place C22 134112 -69977 front 0 (PN 1.5nF))
+      (place C21 126873 -70993 front 270 (PN 4.7uF))
+      (place C19 105664 -79375 front 270 (PN 10uF))
+      (place C17 115824 -79375 front 270 (PN 10uF))
+      (place C16 93645.9 -91849.4 front 180 (PN 22pF))
+      (place C15 100758 -91849.4 front 0 (PN 22pF))
+      (place C10 144272 -70358 front 0 (PN 100nF))
+      (place C6 121158 -117729 front 0 (PN 22pF))
+      (place C5 114173 -117729 front 180 (PN 22pF))
+    )
+    (component Inductor_SMD:L_7.3x7.3_H4.5
+      (place L2 105791 -54864 front 180 (PN 10uH))
+      (place L1 127254 -54864 front 180 (PN 4.7uH))
+    )
+    (component "TerminalBlock:TerminalBlock_Altech_AK300-2_P5.00mm"
+      (place J8 113792 -57404 front 0 (PN PhotoCell))
+    )
+    (component "Connector_JST:JST_XH_S02B-XH-A_1x02_P2.50mm_Horizontal"
+      (place J7 99822 -83058 front 270 (PN BAT))
+    )
+    (component Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder
+      (place C27 134286 -86666 front 90 (PN 100nF))
+      (place RT1 133858 -61468 front 0 (PN 30k1))
+      (place R15 105664 -85217 front 270 (PN 10k48))
+      (place R13 121158 -86614 front 0 (PN 1k))
+      (place R12 114808 -74676 front 0 (PN 1k))
+      (place R10 109474 -74676 front 0 (PN 1k))
+      (place R7 110744 -101600 front 270 (PN 1k))
+      (place R6 108204 -101600 front 270 (PN 1k))
+      (place R5 101092 -114046 front 90 (PN 0R))
+      (place R4 157354 -59690 front 0 (PN 330))
+      (place R2 126746 -93726 front 90 (PN 4k7))
+      (place R1 139700 -89662 front 90 (PN 4k7))
+      (place C18 121920 -76835 front 180 (PN 100nF))
+      (place C14 126746 -98552 front 270 (PN 100nF))
+      (place C13 93980 -108721 front 270 (PN 100nF))
+      (place C12 104394 -114046 front 90 (PN 100nF))
+      (place C11 141986 -105156 front 90 (PN 1uF))
+      (place C9 151130 -52832 front 90 (PN 100nF))
+      (place C8 141986 -100330 front 90 (PN 100nF))
+      (place C7 125298 -102768 front 90 (PN 100nF))
+      (place C4 127584 -106832 front 270 (PN 10uF))
+      (place C3 125298 -106832 front 90 (PN 100nF))
+      (place C2 110490 -106934 front 90 (PN 100nF))
+      (place C1 108458 -106934 front 270 (PN 10uF))
+    )
+    (component Capacitor_SMD:C_0805_2012Metric
+      (place C26 102997 -68072 front 0 (PN 4.7uF))
+      (place C25 99949 -63754 front 270 (PN 1uF))
+    )
+    (component "Crystal:Crystal_HC49-U_Vertical"
+      (place Y2 99614.9 -96167.4 front 180 (PN 12MHz))
+      (place Y1 120142 -113538 front 180 (PN 8MHz))
+    )
+    (component "Package_SO:MSOP-10_3x3mm_P0.5mm"
+      (place U7 129032 -63500 front 270 (PN LTC3440))
+    )
+    (component "Package_SO:HSOP-8-1EP_3.9x4.9mm_P1.27mm_EP2.41x3.1mm_ThermalVias"
+      (place U6 110998 -80645 front 90 (PN TP4056))
+    )
+    (component "Package_TO_SOT_SMD:SOT-23-6_Handsoldering"
+      (place U5 121920 -81407 front 90 (PN "FS312F-G"))
+    )
+    (component "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm"
+      (place U4 133018 -92815.5 front 180 (PN "AT24CS32-SSHM"))
+    )
+    (component "Package_SO:SOIC-16_3.9x9.9mm_P1.27mm"
+      (place U3 99506.4 -105287 front 180 (PN CH340G))
+    )
+    (component "Package_SO:SOIC-16W_7.5x10.3mm_P1.27mm"
+      (place U2 134747 -102997 front 180 (PN DS3231M))
+    )
+    (component "Package_QFP:TQFP-32_7x7mm_P0.8mm"
+      (place U1 117932 -103784 front 0 (PN "ATmega328P-AU"))
+    )
+    (component Resistor_SMD:R_1218_3246Metric_Pad1.22x4.75mm_HandSolder
+      (place TH1 110998 -90297 back 0 (PN "10k (25ᵒ)"))
+    )
+    (component Button_Switch_THT:SW_Tactile_SKHH_Angled
+      (place SW1 156592 -63955.5 front 270 (PN SW_Push))
+    )
+    (component Resistor_SMD:R_1210_3225Metric_Pad1.42x2.65mm_HandSolder
+      (place R8 104140 -74676 front 180 (PN 0R4))
+    )
+    (component "Package_TO_SOT_SMD:TSOT-23"
+      (place Q3 133270 -77649 front 90 (PN 2N7002))
+    )
+    (component "Package_TO_SOT_SMD:SOT-23"
+      (place Q2 127428 -81586 front 270 (PN Si2309DS))
+    )
+    (component "Package_SO:TSSOP-8_4.4x3mm_P0.65mm"
+      (place Q1 118999 -90297 front 180 (PN FS8205A))
+    )
+    (component "Connector_IDC:IDC-Header_2x03_P2.54mm_Vertical"
+      (place J4 135382 -113538 front 270 (PN "AVR-ISP-6"))
+    )
+    (component "Connector_Molex:Molex_KK-254_AE-6410-04A_1x04_P2.54mm_Vertical"
+      (place J3 138684 -61976 front 0 (PN BME280))
+    )
+    (component "Connector_Molex:Molex_KK-254_AE-6410-05A_1x05_P2.54mm_Vertical"
+      (place J2 136144 -54356 front 0 (PN BH1750))
+    )
+    (component Connector_PinHeader_2.54mm:PinHeader_1x06_P2.54mm_Vertical
+      (place J1 109000 -95000 front 90 (PN FTDI))
+    )
+    (component MountingHole:MountingHole_2.7mm_M2.5_Pad_Via
+      (place H4 93345 -116000 front 0 (PN H))
+      (place H3 156000 -54000 front 0 (PN H))
+      (place H2 156000 -116000 front 0 (PN H))
+      (place H1 94000 -54000 front 0 (PN H))
+    )
+    (component LED_SMD:LED_1210_3225Metric_Pad1.42x2.65mm_HandSolder
+      (place D3 116332 -69596 front 90 (PN red))
+      (place D2 119888 -69596 front 90 (PN green))
+    )
+    (component "Diode_THT:D_DO-34_SOD68_P7.62mm_Horizontal"
+      (place D1 138684 -67818 front 0 (PN 1N4148))
+    )
+  )
+  (library
+    (image "kicad_libraries:1220 Battery Holder, SMD"
+      (outline (path signal 120  5715 1651  5715 -1651))
+      (outline (path signal 120  -5715 -1651  -7429.5 -1651))
+      (outline (path signal 120  -5715 1651  -5715 -1651))
+      (outline (path signal 120  -7464.33 1651  -5715 1651))
+      (outline (path signal 120  5715 -7620  5715 -5016.5))
+      (outline (path signal 120  8128 -7620  5715 -7620))
+      (outline (path signal 120  8128 -1651  8128 -7620))
+      (outline (path signal 120  5715 -1651  8128 -1651))
+      (outline (path signal 120  8128 1651  5715 1651))
+      (outline (path signal 120  8128 7620  8128 1651))
+      (outline (path signal 120  5715 7620  8128 7620))
+      (outline (path signal 120  5715 5080  5715 7620))
+      (outline (path signal 150  8001 1778  7239 1778))
+      (outline (path signal 150  8001 7493  8001 1778))
+      (outline (path signal 150  8001 -1778  7239 -1778))
+      (outline (path signal 150  8001 -7493  8001 -1778))
+      (outline (path signal 150  5842 -7493  5842 -4699))
+      (outline (path signal 150  8001 -7493  5842 -7493))
+      (outline (path signal 150  5842 7493  5842 4699))
+      (outline (path signal 150  8001 7493  5842 7493))
+      (outline (path signal 150  -7239 1778  -5588 1778))
+      (outline (path signal 150  -7239 -1778  -5588 -1778))
+      (outline (path signal 150  5588 -1778  7239 -1778))
+      (outline (path signal 150  5588 1778  5588 -1778))
+      (outline (path signal 150  5715 1778  5588 1778))
+      (outline (path signal 150  7239 1778  5715 1778))
+      (outline (path signal 150  -5588 1778  -5588 -1778))
+      (pin Rect[T]Pad_4000x3000_um 2 7900 0)
+      (pin Rect[T]Pad_4000x3000_um 1 -7900 0)
+      (keepout "" (circle F.Cu 1000 -3750 0))
+      (keepout "" (circle B.Cu 1000 -3750 0))
+      (keepout "" (circle F.Cu 1300 3750 0))
+      (keepout "" (circle B.Cu 1300 3750 0))
+    )
+    (image kicad_libraries:Conn_uSDcard
+      (outline (path signal 150  -7350 -3300  0 -3300))
+      (outline (path signal 150  0 -3300  1350 -3350))
+      (outline (path signal 150  1350 -3350  2500 -3500))
+      (outline (path signal 150  2500 -3500  3600 -3700))
+      (outline (path signal 150  3600 -3700  4650 -4000))
+      (outline (path signal 150  2800 10000  2800 11300))
+      (outline (path signal 150  -7350 1800  -7350 9000))
+      (outline (path signal 150  -7350 -1000  -7350 -3300))
+      (outline (path signal 150  4650 -4000  7350 -4000))
+      (outline (path signal 150  7350 -4000  7350 -1000))
+      (outline (path signal 150  7350 9000  7350 1800))
+      (outline (path signal 50  7350 9500  6850 10000))
+      (outline (path signal 150  2350 9400  2050 9400))
+      (outline (path signal 150  2050 9400  2050 9100))
+      (outline (path signal 150  2050 9100  2350 9100))
+      (outline (path signal 150  2350 9100  2350 9400))
+      (outline (path signal 50  -7750 -4500  -7750 -1000))
+      (outline (path signal 50  -7750 -1000  -8750 -1000))
+      (outline (path signal 50  -8750 -1000  -8750 1750))
+      (outline (path signal 50  -8750 1750  -7750 1750))
+      (outline (path signal 50  -7750 1750  -7750 9000))
+      (outline (path signal 50  -7750 9000  -8750 9000))
+      (outline (path signal 50  -8750 9000  -8750 11000))
+      (outline (path signal 50  -8750 11000  -7250 11000))
+      (outline (path signal 50  -7250 11000  -7250 11500))
+      (outline (path signal 50  -7250 11500  2750 11500))
+      (outline (path signal 50  2750 11500  2750 10250))
+      (outline (path signal 50  2750 10250  5750 10250))
+      (outline (path signal 50  5750 10250  5750 11000))
+      (outline (path signal 50  5750 11000  8000 11000))
+      (outline (path signal 50  8000 11000  8000 9000))
+      (outline (path signal 50  8000 9000  7750 9000))
+      (outline (path signal 50  7750 9000  7750 1750))
+      (outline (path signal 50  7750 1750  8750 1750))
+      (outline (path signal 50  8750 1750  8750 -1000))
+      (outline (path signal 50  8750 -1000  7750 -1000))
+      (outline (path signal 50  7750 -1000  7750 -4500))
+      (outline (path signal 50  -9000 -4500  -7000 -4500))
+      (outline (path signal 50  -7000 -4500  -6000 -3500))
+      (outline (path signal 50  -6000 -3500  4000 -3500))
+      (outline (path signal 50  4000 -3500  5000 -4500))
+      (outline (path signal 50  5000 -4500  9000 -4500))
+      (outline (path signal 50  0 -3300  1700 -3400))
+      (outline (path signal 50  1700 -3400  3500 -3700))
+      (outline (path signal 50  3500 -3700  4700 -4000))
+      (outline (path signal 150  2800 10000  5800 10000))
+      (outline (path signal 50  -6550 -8600  -6550 -3300))
+      (outline (path signal 50  -5850 -9300  3950 -9300))
+      (outline (path signal 50  4650 -8600  4650 -4000))
+      (outline (path signal 50  4650 -4000  7350 -4000))
+      (outline (path signal 50  -7350 -3300  0 -3300))
+      (outline (path signal 50  -7350 10000  7350 10000))
+      (outline (path signal 50  7350 10000  7350 -4000))
+      (outline (path signal 50  -7350 10000  -7350 -3300))
+      (pin Rect[T]Pad_1200x2200_um 6 7750 400)
+      (pin Rect[T]Pad_1200x2200_um 6@1 -7750 400)
+      (pin Rect[T]Pad_1600x1400_um 6@2 6850 10000)
+      (pin Rect[T]Pad_1200x1400_um 6@3 -7750 10000)
+      (pin Rect[T]Pad_700x1600_um 9 -6600 10500)
+      (pin Rect[T]Pad_700x1600_um 7 -4400 10500)
+      (pin Rect[T]Pad_700x1600_um 8 -5500 10500)
+      (pin Rect[T]Pad_700x1600_um 6@4 -3300 10500)
+      (pin Rect[T]Pad_700x1600_um 5 -2200 10500)
+      (pin Rect[T]Pad_700x1600_um 4 -1100 10500)
+      (pin Rect[T]Pad_700x1600_um 1 2200 10500)
+      (pin Rect[T]Pad_700x1600_um 2 1100 10500)
+      (pin Rect[T]Pad_700x1600_um 3 0 10500)
+      (keepout "" (circle F.Cu 1000 3050 0))
+      (keepout "" (circle B.Cu 1000 3050 0))
+      (keepout "" (circle F.Cu 1000 -4930 0))
+      (keepout "" (circle B.Cu 1000 -4930 0))
+    )
+    (image "Connector_USB:USB_Micro-B_Wuerth_629105150521"
+      (outline (path signal 50  4950 3340  -4940 3340))
+      (outline (path signal 50  4950 -4850  4950 3340))
+      (outline (path signal 50  -4940 -4850  4950 -4850))
+      (outline (path signal 50  -4940 3340  -4940 -4850))
+      (outline (path signal 150  1800 2400  2800 2400))
+      (outline (path signal 150  -1800 2400  -2800 2400))
+      (outline (path signal 150  -1800 2825  -1800 2400))
+      (outline (path signal 150  -1075 2825  -1800 2825))
+      (outline (path signal 150  4150 -750  4150 650))
+      (outline (path signal 150  4150 -3300  4150 -3150))
+      (outline (path signal 150  3850 -3300  4150 -3300))
+      (outline (path signal 150  3850 -3750  3850 -3300))
+      (outline (path signal 150  -3850 -3300  -3850 -3750))
+      (outline (path signal 150  -4150 -3300  -3850 -3300))
+      (outline (path signal 150  -4150 -3150  -4150 -3300))
+      (outline (path signal 150  -4150 650  -4150 -750))
+      (outline (path signal 150  -1075 2950  -1075 2725))
+      (outline (path signal 150  -1525 2950  -1075 2950))
+      (outline (path signal 150  -1525 2725  -1525 2950))
+      (outline (path signal 150  -1300 2550  -1525 2725))
+      (outline (path signal 150  -1075 2725  -1300 2550))
+      (outline (path signal 150  -2700 -3750  2700 -3750))
+      (outline (path signal 150  4000 2250  -4000 2250))
+      (outline (path signal 150  4000 -3150  4000 2250))
+      (outline (path signal 150  3700 -3150  4000 -3150))
+      (outline (path signal 150  3700 -4350  3700 -3150))
+      (outline (path signal 150  -3700 -4350  3700 -4350))
+      (outline (path signal 150  -3700 -3150  -3700 -4350))
+      (outline (path signal 150  -4000 -3150  -3700 -3150))
+      (outline (path signal 150  -4000 2250  -4000 -3150))
+      (pin Oval[A]Pad_800x800_um @1 2500 800)
+      (pin Oval[A]Pad_800x800_um @2 -2500 800)
+      (pin Oval[A]Pad_1150x1800_um 6 3875 -1950)
+      (pin Oval[A]Pad_1150x1800_um 6@1 -3875 -1950)
+      (pin Oval[A]Pad_1450x2000_um 6@2 3725 1850)
+      (pin Oval[A]Pad_1450x2000_um 6@3 -3725 1850)
+      (pin Rect[T]Pad_450x1300_um 5 1300 1900)
+      (pin Rect[T]Pad_450x1300_um 4 650 1900)
+      (pin Rect[T]Pad_450x1300_um 3 0 1900)
+      (pin Rect[T]Pad_450x1300_um 2 -650 1900)
+      (pin Rect[T]Pad_450x1300_um 1 -1300 1900)
+    )
+    (image "Package_SO:MSOP-10-1EP_3x3mm_P0.5mm_EP1.68x1.88mm"
+      (outline (path signal 150  -1625 1475  -2550 1475))
+      (outline (path signal 150  -1625 -1625  1625 -1625))
+      (outline (path signal 150  -1625 1625  1625 1625))
+      (outline (path signal 150  -1625 -1625  -1625 -1377.5))
+      (outline (path signal 150  1625 -1625  1625 -1377.5))
+      (outline (path signal 150  1625 1625  1625 1377.5))
+      (outline (path signal 150  -1625 1625  -1625 1475))
+      (outline (path signal 50  -2800 -1800  2800 -1800))
+      (outline (path signal 50  -2800 1800  2800 1800))
+      (outline (path signal 50  2800 1800  2800 -1800))
+      (outline (path signal 50  -2800 1800  -2800 -1800))
+      (outline (path signal 150  -1500 500  -500 1500))
+      (outline (path signal 150  -1500 -1500  -1500 500))
+      (outline (path signal 150  1500 -1500  -1500 -1500))
+      (outline (path signal 150  1500 1500  1500 -1500))
+      (outline (path signal 150  -500 1500  1500 1500))
+      (pin Rect[T]Pad_1680x1880_um 11 0 0)
+      (pin Rect[T]Pad_890x305_um 10 2105 1000)
+      (pin Rect[T]Pad_890x305_um 9 2105 500)
+      (pin Rect[T]Pad_890x305_um 8 2105 0)
+      (pin Rect[T]Pad_890x305_um 7 2105 -500)
+      (pin Rect[T]Pad_890x305_um 6 2105 -1000)
+      (pin Rect[T]Pad_890x305_um 5 -2105 -1000)
+      (pin Rect[T]Pad_890x305_um 4 -2105 -500)
+      (pin Rect[T]Pad_890x305_um 3 -2105 0)
+      (pin Rect[T]Pad_890x305_um 2 -2105 500)
+      (pin Rect[T]Pad_890x305_um 1 -2105 1000)
+    )
+    (image Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder
+      (outline (path signal 50  2450 -1120  -2450 -1120))
+      (outline (path signal 50  2450 1120  2450 -1120))
+      (outline (path signal 50  -2450 1120  2450 1120))
+      (outline (path signal 50  -2450 -1120  -2450 1120))
+      (outline (path signal 120  -602.064 -910  602.064 -910))
+      (outline (path signal 120  -602.064 910  602.064 910))
+      (outline (path signal 100  1600 -800  -1600 -800))
+      (outline (path signal 100  1600 800  1600 -800))
+      (outline (path signal 100  -1600 800  1600 800))
+      (outline (path signal 100  -1600 -800  -1600 800))
+      (pin RoundRect[T]Pad_1425x1750_250.951_um 2 1487.5 0)
+      (pin RoundRect[T]Pad_1425x1750_250.951_um 1 -1487.5 0)
+    )
+    (image Inductor_SMD:L_7.3x7.3_H4.5
+      (outline (path signal 100  -3650 3650  3650 3650))
+      (outline (path signal 100  3650 -3650  -3650 -3650))
+      (outline (path signal 100  -3650 3650  -3650 1400))
+      (outline (path signal 100  -3650 -3650  -3650 -1400))
+      (outline (path signal 100  3650 3650  3650 1400))
+      (outline (path signal 100  3650 -3650  3650 -1400))
+      (outline (path signal 50  4200 3900  -4200 3900))
+      (outline (path signal 50  4200 -3900  4200 3900))
+      (outline (path signal 50  -4200 -3900  4200 -3900))
+      (outline (path signal 50  -4200 3900  -4200 -3900))
+      (outline (path signal 120  3700 3700  3700 1400))
+      (outline (path signal 120  -3700 3700  3700 3700))
+      (outline (path signal 120  -3700 1400  -3700 3700))
+      (outline (path signal 120  -3700 -3700  -3700 -1400))
+      (outline (path signal 120  3700 -3700  -3700 -3700))
+      (outline (path signal 120  3700 -1400  3700 -3700))
+      (pin Rect[T]Pad_1500x2200_um 2 3200 0)
+      (pin Rect[T]Pad_1500x2200_um 1 -3200 0)
+    )
+    (image "TerminalBlock:TerminalBlock_Altech_AK300-2_P5.00mm"
+      (outline (path signal 50  8360 -6470  -2830 -6470))
+      (outline (path signal 50  8360 -6470  8360 6470))
+      (outline (path signal 50  -2830 6470  -2830 -6470))
+      (outline (path signal 50  -2830 6470  8360 6470))
+      (outline (path signal 100  3360 250  6670 250))
+      (outline (path signal 100  2980 250  3360 250))
+      (outline (path signal 100  7050 250  6670 250))
+      (outline (path signal 100  6670 640  3360 640))
+      (outline (path signal 100  7610 640  6670 640))
+      (outline (path signal 100  1660 640  3360 640))
+      (outline (path signal 100  -1640 640  1660 640))
+      (outline (path signal 100  -2580 640  -1640 640))
+      (outline (path signal 100  1660 250  -1640 250))
+      (outline (path signal 100  2040 250  1660 250))
+      (outline (path signal 100  -2020 250  -1640 250))
+      (outline (path signal 100  -1490 4320  1560 4950))
+      (outline (path signal 100  -1620 4450  1440 5080))
+      (outline (path signal 100  3520 4320  6560 4950))
+      (outline (path signal 100  3390 4450  6440 5080))
+      (outline (path signal 100  2040 5970  -2020 5970))
+      (outline (path signal 100  -2020 3430  -2020 5970))
+      (outline (path signal 100  2040 3430  -2020 3430))
+      (outline (path signal 100  2040 3430  2040 5970))
+      (outline (path signal 100  7050 3430  2980 3430))
+      (outline (path signal 100  7050 5970  7050 3430))
+      (outline (path signal 100  2980 5970  7050 5970))
+      (outline (path signal 100  2980 3430  2980 5970))
+      (outline (path signal 100  7610 3170  7610 1650))
+      (outline (path signal 100  -2580 3170  -2580 6220))
+      (outline (path signal 100  -2580 3170  7610 3170))
+      (outline (path signal 100  7610 640  7610 -4060))
+      (outline (path signal 100  7610 1650  7610 640))
+      (outline (path signal 100  -2580 640  -2580 3170))
+      (outline (path signal 100  -2580 -6220  -2580 640))
+      (outline (path signal 100  6670 -510  6280 -510))
+      (outline (path signal 100  3360 -510  3740 -510))
+      (outline (path signal 100  1660 -510  1280 -510))
+      (outline (path signal 100  -1640 -510  -1260 -510))
+      (outline (path signal 100  -1640 -3680  -1640 -510))
+      (outline (path signal 100  1660 -3680  -1640 -3680))
+      (outline (path signal 100  1660 -3680  1660 -510))
+      (outline (path signal 100  3360 -3680  3360 -510))
+      (outline (path signal 100  6670 -3680  3360 -3680))
+      (outline (path signal 100  6670 -3680  6670 -510))
+      (outline (path signal 100  -2020 -4320  -2020 -6220))
+      (outline (path signal 100  2040 -4320  2040 250))
+      (outline (path signal 100  2040 -4320  -2020 -4320))
+      (outline (path signal 100  7050 -4320  7050 -6220))
+      (outline (path signal 100  2980 -4320  2980 250))
+      (outline (path signal 100  2980 -4320  7050 -4320))
+      (outline (path signal 100  -2020 -6220  2040 -6220))
+      (outline (path signal 100  -2580 -6220  -2020 -6220))
+      (outline (path signal 100  -2020 250  -2020 -4320))
+      (outline (path signal 100  2040 -6220  2980 -6220))
+      (outline (path signal 100  2040 -6220  2040 -4320))
+      (outline (path signal 100  7050 -6220  7610 -6220))
+      (outline (path signal 100  2980 -6220  7050 -6220))
+      (outline (path signal 100  7050 250  7050 -4320))
+      (outline (path signal 100  2980 -6220  2980 -4320))
+      (outline (path signal 100  8110 -3810  8110 -5460))
+      (outline (path signal 100  7610 -4060  7610 -5210))
+      (outline (path signal 100  8110 -3810  7610 -4060))
+      (outline (path signal 100  7610 -5210  7610 -6220))
+      (outline (path signal 100  8110 -5460  7610 -5210))
+      (outline (path signal 100  8110 1400  7610 1650))
+      (outline (path signal 100  8110 6220  8110 1400))
+      (outline (path signal 100  7610 6220  8110 6220))
+      (outline (path signal 100  7610 6220  -2580 6220))
+      (outline (path signal 100  7610 6220  7610 3170))
+      (outline (path signal 100  3740 -2540  3740 250))
+      (outline (path signal 100  3740 250  6280 250))
+      (outline (path signal 100  6280 -2540  6280 250))
+      (outline (path signal 100  3740 -2540  6280 -2540))
+      (outline (path signal 100  -1260 -2540  -1260 250))
+      (outline (path signal 100  -1260 250  1280 250))
+      (outline (path signal 100  1280 -2540  1280 250))
+      (outline (path signal 100  -1260 -2540  1280 -2540))
+      (outline (path signal 120  8200 6300  -2650 6300))
+      (outline (path signal 120  8200 1200  8200 6300))
+      (outline (path signal 120  7700 1500  8200 1200))
+      (outline (path signal 120  7700 -3900  7700 1500))
+      (outline (path signal 120  8200 -3650  7700 -3900))
+      (outline (path signal 120  8200 -3700  8200 -3650))
+      (outline (path signal 120  8200 -5600  8200 -3700))
+      (outline (path signal 120  7700 -5350  8200 -5600))
+      (outline (path signal 120  7700 -6300  7700 -5350))
+      (outline (path signal 120  -2650 -6300  7700 -6300))
+      (outline (path signal 120  -2650 6300  -2650 -6300))
+      (pin Oval[A]Pad_1980x3960_um 2 5000 0)
+      (pin Rect[A]Pad_1980x3960_um 1 0 0)
+    )
+    (image "Connector_JST:JST_XH_S02B-XH-A_1x02_P2.50mm_Horizontal"
+      (outline (path signal 100  0 -1200  625 -2200))
+      (outline (path signal 100  -625 -2200  0 -1200))
+      (outline (path signal 120  300 2100  0 1500))
+      (outline (path signal 120  -300 2100  300 2100))
+      (outline (path signal 120  0 1500  -300 2100))
+      (outline (path signal 120  2750 -3200  2250 -3200))
+      (outline (path signal 120  2750 -8700  2750 -3200))
+      (outline (path signal 120  2250 -8700  2750 -8700))
+      (outline (path signal 120  2250 -3200  2250 -8700))
+      (outline (path signal 120  250 -3200  -250 -3200))
+      (outline (path signal 120  250 -8700  250 -3200))
+      (outline (path signal 120  -250 -8700  250 -8700))
+      (outline (path signal 120  -250 -3200  -250 -8700))
+      (outline (path signal 100  3750 -2200  1250 -2200))
+      (outline (path signal 100  3750 2300  3750 -2200))
+      (outline (path signal 100  4950 2300  3750 2300))
+      (outline (path signal 100  4950 -9200  4950 2300))
+      (outline (path signal 100  1250 -9200  4950 -9200))
+      (outline (path signal 100  -1250 -2200  1250 -2200))
+      (outline (path signal 100  -1250 2300  -1250 -2200))
+      (outline (path signal 100  -2450 2300  -1250 2300))
+      (outline (path signal 100  -2450 -9200  -2450 2300))
+      (outline (path signal 100  1250 -9200  -2450 -9200))
+      (outline (path signal 120  3640 -2090  1250 -2090))
+      (outline (path signal 120  3640 2410  3640 -2090))
+      (outline (path signal 120  5060 2410  3640 2410))
+      (outline (path signal 120  5060 -9310  5060 2410))
+      (outline (path signal 120  1250 -9310  5060 -9310))
+      (outline (path signal 120  -1140 -2090  1250 -2090))
+      (outline (path signal 120  -1140 2410  -1140 -2090))
+      (outline (path signal 120  -2560 2410  -1140 2410))
+      (outline (path signal 120  -2560 -9310  -2560 2410))
+      (outline (path signal 120  1250 -9310  -2560 -9310))
+      (outline (path signal 50  5450 2800  -2950 2800))
+      (outline (path signal 50  5450 -9700  5450 2800))
+      (outline (path signal 50  -2950 -9700  5450 -9700))
+      (outline (path signal 50  -2950 2800  -2950 -9700))
+      (pin Oval[A]Pad_1700x2000_um 2 2500 0)
+      (pin RoundRect[A]Pad_1700x2000_250.951_um 1 0 0)
+    )
+    (image Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder
+      (outline (path signal 50  1850 -950  -1850 -950))
+      (outline (path signal 50  1850 950  1850 -950))
+      (outline (path signal 50  -1850 950  1850 950))
+      (outline (path signal 50  -1850 -950  -1850 950))
+      (outline (path signal 120  -261.252 -710  261.252 -710))
+      (outline (path signal 120  -261.252 710  261.252 710))
+      (outline (path signal 100  1000 -600  -1000 -600))
+      (outline (path signal 100  1000 600  1000 -600))
+      (outline (path signal 100  -1000 600  1000 600))
+      (outline (path signal 100  -1000 -600  -1000 600))
+      (pin RoundRect[T]Pad_1150x1400_250.95_um 2 1025 0)
+      (pin RoundRect[T]Pad_1150x1400_250.95_um 1 -1025 0)
+    )
+    (image Capacitor_SMD:C_0805_2012Metric
+      (outline (path signal 50  1680 -950  -1680 -950))
+      (outline (path signal 50  1680 950  1680 -950))
+      (outline (path signal 50  -1680 950  1680 950))
+      (outline (path signal 50  -1680 -950  -1680 950))
+      (outline (path signal 120  -258.578 -710  258.578 -710))
+      (outline (path signal 120  -258.578 710  258.578 710))
+      (outline (path signal 100  1000 -600  -1000 -600))
+      (outline (path signal 100  1000 600  1000 -600))
+      (outline (path signal 100  -1000 600  1000 600))
+      (outline (path signal 100  -1000 -600  -1000 600))
+      (pin RoundRect[T]Pad_975x1400_244.678_um 2 937.5 0)
+      (pin RoundRect[T]Pad_975x1400_244.678_um 1 -937.5 0)
+    )
+    (image "Crystal:Crystal_HC49-U_Vertical"
+      (outline (path signal 50  8400 2800  -3500 2800))
+      (outline (path signal 50  8400 -2800  8400 2800))
+      (outline (path signal 50  -3500 -2800  8400 -2800))
+      (outline (path signal 50  -3500 2800  -3500 -2800))
+      (outline (path signal 120  -685 -2525  5565 -2525))
+      (outline (path signal 120  -685 2525  5565 2525))
+      (outline (path signal 100  -560 -2000  5440 -2000))
+      (outline (path signal 100  -560 2000  5440 2000))
+      (outline (path signal 100  -685 -2325  5565 -2325))
+      (outline (path signal 100  -685 2325  5565 2325))
+      (pin Round[A]Pad_1500_um 2 4880 0)
+      (pin Round[A]Pad_1500_um 1 0 0)
+    )
+    (image "Package_SO:MSOP-10_3x3mm_P0.5mm"
+      (outline (path signal 150  -1675 1450  -2900 1450))
+      (outline (path signal 150  -1675 -1675  1675 -1675))
+      (outline (path signal 150  -1675 1675  1675 1675))
+      (outline (path signal 150  -1675 -1675  -1675 -1375))
+      (outline (path signal 150  1675 -1675  1675 -1375))
+      (outline (path signal 150  1675 1675  1675 1375))
+      (outline (path signal 150  -1675 1675  -1675 1450))
+      (outline (path signal 50  -3150 -1850  3150 -1850))
+      (outline (path signal 50  -3150 1850  3150 1850))
+      (outline (path signal 50  3150 1850  3150 -1850))
+      (outline (path signal 50  -3150 1850  -3150 -1850))
+      (outline (path signal 150  -1500 500  -500 1500))
+      (outline (path signal 150  -1500 -1500  -1500 500))
+      (outline (path signal 150  1500 -1500  -1500 -1500))
+      (outline (path signal 150  1500 1500  1500 -1500))
+      (outline (path signal 150  -500 1500  1500 1500))
+      (pin Rect[T]Pad_1400x300_um 10 2200 1000)
+      (pin Rect[T]Pad_1400x300_um 9 2200 500)
+      (pin Rect[T]Pad_1400x300_um 8 2200 0)
+      (pin Rect[T]Pad_1400x300_um 7 2200 -500)
+      (pin Rect[T]Pad_1400x300_um 6 2200 -1000)
+      (pin Rect[T]Pad_1400x300_um 5 -2200 -1000)
+      (pin Rect[T]Pad_1400x300_um 4 -2200 -500)
+      (pin Rect[T]Pad_1400x300_um 3 -2200 0)
+      (pin Rect[T]Pad_1400x300_um 2 -2200 500)
+      (pin Rect[T]Pad_1400x300_um 1 -2200 1000)
+    )
+    (image "Package_SO:HSOP-8-1EP_3.9x4.9mm_P1.27mm_EP2.41x3.1mm_ThermalVias"
+      (outline (path signal 50  3700 2700  -3700 2700))
+      (outline (path signal 50  3700 -2700  3700 2700))
+      (outline (path signal 50  -3700 -2700  3700 -2700))
+      (outline (path signal 50  -3700 2700  -3700 -2700))
+      (outline (path signal 100  -1950 1475  -975 2450))
+      (outline (path signal 100  -1950 -2450  -1950 1475))
+      (outline (path signal 100  1950 -2450  -1950 -2450))
+      (outline (path signal 100  1950 2450  1950 -2450))
+      (outline (path signal 100  -975 2450  1950 2450))
+      (outline (path signal 120  -1950 -2560  1950 -2560))
+      (outline (path signal 120  -3450 2560  1950 2560))
+      (pin RoundRect[T]Pad_1600x600_150.571_um 8 2650 1905)
+      (pin RoundRect[T]Pad_1600x600_150.571_um 7 2650 635)
+      (pin RoundRect[T]Pad_1600x600_150.571_um 6 2650 -635)
+      (pin RoundRect[T]Pad_1600x600_150.571_um 5 2650 -1905)
+      (pin RoundRect[T]Pad_1600x600_150.571_um 4 -2650 -1905)
+      (pin RoundRect[T]Pad_1600x600_150.571_um 3 -2650 -635)
+      (pin RoundRect[T]Pad_1600x600_150.571_um 2 -2650 635)
+      (pin RoundRect[T]Pad_1600x600_150.571_um 1 -2650 1905)
+      (pin RoundRect[B]Pad_2410x3100_250.949_um 9 0 0)
+      (pin Round[A]Pad_500_um 9@1 955 -1300)
+      (pin Round[A]Pad_500_um 9@2 -955 -1300)
+      (pin Round[A]Pad_500_um 9@3 955 0)
+      (pin Round[A]Pad_500_um 9@4 -955 0)
+      (pin Round[A]Pad_500_um 9@5 955 1300)
+      (pin Round[A]Pad_500_um 9@6 -955 1300)
+      (pin RoundRect[T]Pad_2410x3100_251.594_um 9@7 0 0)
+    )
+    (image "Package_TO_SOT_SMD:SOT-23-6_Handsoldering"
+      (outline (path signal 100  900 1550  900 -1550))
+      (outline (path signal 100  900 -1550  -900 -1550))
+      (outline (path signal 100  -900 900  -900 -1550))
+      (outline (path signal 100  900 1550  -250 1550))
+      (outline (path signal 100  -900 900  -250 1550))
+      (outline (path signal 50  -2400 1800  2400 1800))
+      (outline (path signal 50  2400 1800  2400 -1800))
+      (outline (path signal 50  2400 -1800  -2400 -1800))
+      (outline (path signal 50  -2400 -1800  -2400 1800))
+      (outline (path signal 120  900 1610  -2050 1610))
+      (outline (path signal 120  -900 -1610  900 -1610))
+      (pin Rect[T]Pad_1560x650_um 5 1350 0)
+      (pin Rect[T]Pad_1560x650_um 6 1350 950)
+      (pin Rect[T]Pad_1560x650_um 4 1350 -950)
+      (pin Rect[T]Pad_1560x650_um 3 -1350 -950)
+      (pin Rect[T]Pad_1560x650_um 2 -1350 0)
+      (pin Rect[T]Pad_1560x650_um 1 -1350 950)
+    )
+    (image "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm"
+      (outline (path signal 150  -2075 2525  -3475 2525))
+      (outline (path signal 150  -2075 -2575  2075 -2575))
+      (outline (path signal 150  -2075 2575  2075 2575))
+      (outline (path signal 150  -2075 -2575  -2075 -2430))
+      (outline (path signal 150  2075 -2575  2075 -2430))
+      (outline (path signal 150  2075 2575  2075 2430))
+      (outline (path signal 150  -2075 2575  -2075 2525))
+      (outline (path signal 50  -3730 -2700  3730 -2700))
+      (outline (path signal 50  -3730 2700  3730 2700))
+      (outline (path signal 50  3730 2700  3730 -2700))
+      (outline (path signal 50  -3730 2700  -3730 -2700))
+      (outline (path signal 100  -1950 1450  -950 2450))
+      (outline (path signal 100  -1950 -2450  -1950 1450))
+      (outline (path signal 100  1950 -2450  -1950 -2450))
+      (outline (path signal 100  1950 2450  1950 -2450))
+      (outline (path signal 100  -950 2450  1950 2450))
+      (pin Rect[T]Pad_1550x600_um 8 2700 1905)
+      (pin Rect[T]Pad_1550x600_um 7 2700 635)
+      (pin Rect[T]Pad_1550x600_um 6 2700 -635)
+      (pin Rect[T]Pad_1550x600_um 5 2700 -1905)
+      (pin Rect[T]Pad_1550x600_um 4 -2700 -1905)
+      (pin Rect[T]Pad_1550x600_um 3 -2700 -635)
+      (pin Rect[T]Pad_1550x600_um 2 -2700 635)
+      (pin Rect[T]Pad_1550x600_um 1 -2700 1905)
+    )
+    (image "Package_SO:SOIC-16_3.9x9.9mm_P1.27mm"
+      (outline (path signal 150  -2075 5050  -3450 5050))
+      (outline (path signal 150  -2075 -5075  2075 -5075))
+      (outline (path signal 150  -2075 5075  2075 5075))
+      (outline (path signal 150  -2075 -5075  -2075 -4970))
+      (outline (path signal 150  2075 -5075  2075 -4970))
+      (outline (path signal 150  2075 5075  2075 4970))
+      (outline (path signal 150  -2075 5075  -2075 5050))
+      (outline (path signal 50  -3700 -5250  3700 -5250))
+      (outline (path signal 50  -3700 5250  3700 5250))
+      (outline (path signal 50  3700 5250  3700 -5250))
+      (outline (path signal 50  -3700 5250  -3700 -5250))
+      (outline (path signal 150  -1950 3950  -950 4950))
+      (outline (path signal 150  -1950 -4950  -1950 3950))
+      (outline (path signal 150  1950 -4950  -1950 -4950))
+      (outline (path signal 150  1950 4950  1950 -4950))
+      (outline (path signal 150  -950 4950  1950 4950))
+      (pin Rect[T]Pad_1500x600_um 16 2700 4445)
+      (pin Rect[T]Pad_1500x600_um 15 2700 3175)
+      (pin Rect[T]Pad_1500x600_um 14 2700 1905)
+      (pin Rect[T]Pad_1500x600_um 13 2700 635)
+      (pin Rect[T]Pad_1500x600_um 12 2700 -635)
+      (pin Rect[T]Pad_1500x600_um 11 2700 -1905)
+      (pin Rect[T]Pad_1500x600_um 10 2700 -3175)
+      (pin Rect[T]Pad_1500x600_um 9 2700 -4445)
+      (pin Rect[T]Pad_1500x600_um 8 -2700 -4445)
+      (pin Rect[T]Pad_1500x600_um 7 -2700 -3175)
+      (pin Rect[T]Pad_1500x600_um 6 -2700 -1905)
+      (pin Rect[T]Pad_1500x600_um 5 -2700 -635)
+      (pin Rect[T]Pad_1500x600_um 4 -2700 635)
+      (pin Rect[T]Pad_1500x600_um 3 -2700 1905)
+      (pin Rect[T]Pad_1500x600_um 2 -2700 3175)
+      (pin Rect[T]Pad_1500x600_um 1 -2700 4445)
+    )
+    (image "Package_SO:SOIC-16W_7.5x10.3mm_P1.27mm"
+      (outline (path signal 150  -3875 5050  -5400 5050))
+      (outline (path signal 150  -3875 -5325  3875 -5325))
+      (outline (path signal 150  -3875 5325  3875 5325))
+      (outline (path signal 150  -3875 -5325  -3875 -4970))
+      (outline (path signal 150  3875 -5325  3875 -4970))
+      (outline (path signal 150  3875 5325  3875 4970))
+      (outline (path signal 150  -3875 5325  -3875 5050))
+      (outline (path signal 50  -5650 -5500  5650 -5500))
+      (outline (path signal 50  -5650 5500  5650 5500))
+      (outline (path signal 50  5650 5500  5650 -5500))
+      (outline (path signal 50  -5650 5500  -5650 -5500))
+      (outline (path signal 150  -3750 4150  -2750 5150))
+      (outline (path signal 150  -3750 -5150  -3750 4150))
+      (outline (path signal 150  3750 -5150  -3750 -5150))
+      (outline (path signal 150  3750 5150  3750 -5150))
+      (outline (path signal 150  -2750 5150  3750 5150))
+      (pin Rect[T]Pad_1500x600_um 16 4650 4445)
+      (pin Rect[T]Pad_1500x600_um 15 4650 3175)
+      (pin Rect[T]Pad_1500x600_um 14 4650 1905)
+      (pin Rect[T]Pad_1500x600_um 13 4650 635)
+      (pin Rect[T]Pad_1500x600_um 12 4650 -635)
+      (pin Rect[T]Pad_1500x600_um 11 4650 -1905)
+      (pin Rect[T]Pad_1500x600_um 10 4650 -3175)
+      (pin Rect[T]Pad_1500x600_um 9 4650 -4445)
+      (pin Rect[T]Pad_1500x600_um 8 -4650 -4445)
+      (pin Rect[T]Pad_1500x600_um 7 -4650 -3175)
+      (pin Rect[T]Pad_1500x600_um 6 -4650 -1905)
+      (pin Rect[T]Pad_1500x600_um 5 -4650 -635)
+      (pin Rect[T]Pad_1500x600_um 4 -4650 635)
+      (pin Rect[T]Pad_1500x600_um 3 -4650 1905)
+      (pin Rect[T]Pad_1500x600_um 2 -4650 3175)
+      (pin Rect[T]Pad_1500x600_um 1 -4650 4445)
+    )
+    (image "Package_QFP:TQFP-32_7x7mm_P0.8mm"
+      (outline (path signal 150  -3625 3400  -5050 3400))
+      (outline (path signal 150  3625 3625  3300 3625))
+      (outline (path signal 150  3625 -3625  3300 -3625))
+      (outline (path signal 150  -3625 -3625  -3300 -3625))
+      (outline (path signal 150  -3625 3625  -3300 3625))
+      (outline (path signal 150  -3625 -3625  -3625 -3300))
+      (outline (path signal 150  3625 -3625  3625 -3300))
+      (outline (path signal 150  3625 3625  3625 3300))
+      (outline (path signal 150  -3625 3625  -3625 3400))
+      (outline (path signal 50  -5300 -5300  5300 -5300))
+      (outline (path signal 50  -5300 5300  5300 5300))
+      (outline (path signal 50  5300 5300  5300 -5300))
+      (outline (path signal 50  -5300 5300  -5300 -5300))
+      (outline (path signal 150  -3500 2500  -2500 3500))
+      (outline (path signal 150  -3500 -3500  -3500 2500))
+      (outline (path signal 150  3500 -3500  -3500 -3500))
+      (outline (path signal 150  3500 3500  3500 -3500))
+      (outline (path signal 150  -2500 3500  3500 3500))
+      (pin Rect[T]Pad_1600x550_um (rotate 90) 32 -2800 4250)
+      (pin Rect[T]Pad_1600x550_um (rotate 90) 31 -2000 4250)
+      (pin Rect[T]Pad_1600x550_um (rotate 90) 30 -1200 4250)
+      (pin Rect[T]Pad_1600x550_um (rotate 90) 29 -400 4250)
+      (pin Rect[T]Pad_1600x550_um (rotate 90) 28 400 4250)
+      (pin Rect[T]Pad_1600x550_um (rotate 90) 27 1200 4250)
+      (pin Rect[T]Pad_1600x550_um (rotate 90) 26 2000 4250)
+      (pin Rect[T]Pad_1600x550_um (rotate 90) 25 2800 4250)
+      (pin Rect[T]Pad_1600x550_um 24 4250 2800)
+      (pin Rect[T]Pad_1600x550_um 23 4250 2000)
+      (pin Rect[T]Pad_1600x550_um 22 4250 1200)
+      (pin Rect[T]Pad_1600x550_um 21 4250 400)
+      (pin Rect[T]Pad_1600x550_um 20 4250 -400)
+      (pin Rect[T]Pad_1600x550_um 19 4250 -1200)
+      (pin Rect[T]Pad_1600x550_um 18 4250 -2000)
+      (pin Rect[T]Pad_1600x550_um 17 4250 -2800)
+      (pin Rect[T]Pad_1600x550_um (rotate 90) 16 2800 -4250)
+      (pin Rect[T]Pad_1600x550_um (rotate 90) 15 2000 -4250)
+      (pin Rect[T]Pad_1600x550_um (rotate 90) 14 1200 -4250)
+      (pin Rect[T]Pad_1600x550_um (rotate 90) 13 400 -4250)
+      (pin Rect[T]Pad_1600x550_um (rotate 90) 12 -400 -4250)
+      (pin Rect[T]Pad_1600x550_um (rotate 90) 11 -1200 -4250)
+      (pin Rect[T]Pad_1600x550_um (rotate 90) 10 -2000 -4250)
+      (pin Rect[T]Pad_1600x550_um (rotate 90) 9 -2800 -4250)
+      (pin Rect[T]Pad_1600x550_um 8 -4250 -2800)
+      (pin Rect[T]Pad_1600x550_um 7 -4250 -2000)
+      (pin Rect[T]Pad_1600x550_um 6 -4250 -1200)
+      (pin Rect[T]Pad_1600x550_um 5 -4250 -400)
+      (pin Rect[T]Pad_1600x550_um 4 -4250 400)
+      (pin Rect[T]Pad_1600x550_um 3 -4250 1200)
+      (pin Rect[T]Pad_1600x550_um 2 -4250 2000)
+      (pin Rect[T]Pad_1600x550_um 1 -4250 2800)
+    )
+    (image Resistor_SMD:R_1218_3246Metric_Pad1.22x4.75mm_HandSolder
+      (outline (path signal 50  2420 -2620  -2420 -2620))
+      (outline (path signal 50  2420 2620  2420 -2620))
+      (outline (path signal 50  -2420 2620  2420 2620))
+      (outline (path signal 50  -2420 -2620  -2420 2620))
+      (outline (path signal 120  -777.064 -2410  777.064 -2410))
+      (outline (path signal 120  -777.064 2410  777.064 2410))
+      (outline (path signal 100  1600 -2300  -1600 -2300))
+      (outline (path signal 100  1600 2300  1600 -2300))
+      (outline (path signal 100  -1600 2300  1600 2300))
+      (outline (path signal 100  -1600 -2300  -1600 2300))
+      (pin RoundRect[T]Pad_1225x4750_250.951_um 2 1562.5 0)
+      (pin RoundRect[T]Pad_1225x4750_250.951_um 1 -1562.5 0)
+    )
+    (image Button_Switch_THT:SW_Tactile_SKHH_Angled
+      (outline (path signal 120  -1620 -3820  -1620 -4120))
+      (outline (path signal 120  -730 -4120  -730 -3770))
+      (outline (path signal 120  -730 -4120  -1620 -4120))
+      (outline (path signal 100  -107 -2500  -184.184 -2912.9  -405.313 -3270.03  -740.521 -3523.17
+            -1144.54 -3638.12  -1562.8 -3599.37  -1938.81 -3412.13  -2221.8 -3101.71
+            -2373.54 -2710.03  -2373.54 -2289.97  -2221.8 -1898.29  -1938.81 -1587.87
+            -1562.8 -1400.63  -1144.54 -1361.88  -740.521 -1476.83  -405.313 -1729.97
+            -184.184 -2087.1  -107 -2500))
+      (outline (path signal 100  5389 0  5312.14 -361.589  5094.86 -660.656  4774.72 -845.489
+            4407.07 -884.13  4055.5 -769.897  3780.78 -522.541  3630.43 -184.833
+            3630.43 184.833  3780.78 522.541  4055.5 769.897  4407.07 884.13
+            4774.72 845.489  5094.86 660.656  5312.14 361.589  5389 0))
+      (outline (path signal 100  889 0  812.142 -361.589  594.857 -660.656  274.716 -845.489
+            -92.926 -884.13  -444.5 -769.897  -719.216 -522.541  -869.573 -184.833
+            -869.573 184.833  -719.216 522.541  -444.5 769.897  -92.926 884.13
+            274.716 845.489  594.857 660.656  812.142 361.589  889 0))
+      (outline (path signal 100  6893 -2500  6815.82 -2912.9  6594.69 -3270.03  6259.48 -3523.17
+            5855.46 -3638.12  5437.2 -3599.37  5061.19 -3412.13  4778.2 -3101.71
+            4626.46 -2710.03  4626.46 -2289.97  4778.2 -1898.29  5061.19 -1587.87
+            5437.2 -1400.63  5855.46 -1361.88  6259.48 -1476.83  6594.69 -1729.97
+            6815.82 -2087.1  6893 -2500))
+      (outline (path signal 100  -615 -2500  -700.074 -2817.5  -932.5 -3049.93  -1250 -3135
+            -1567.5 -3049.93  -1799.93 -2817.5  -1885 -2500  -1799.93 -2182.5
+            -1567.5 -1950.07  -1250 -1865  -932.5 -1950.07  -700.074 -2182.5
+            -615 -2500))
+      (outline (path signal 100  6385 -2500  6299.93 -2817.5  6067.5 -3049.93  5750 -3135
+            5432.5 -3049.93  5200.07 -2817.5  5115 -2500  5200.07 -2182.5
+            5432.5 -1950.07  5750 -1865  6067.5 -1950.07  6299.93 -2182.5
+            6385 -2500))
+      (outline (path signal 100  4944.5 0  4859.61 -261.271  4637.36 -422.745  4362.64 -422.745
+            4140.39 -261.271  4055.5 0  4140.39 261.271  4362.64 422.745
+            4637.36 422.745  4859.61 261.271  4944.5 0))
+      (outline (path signal 100  444.5 0  359.608 -261.271  137.358 -422.745  -137.358 -422.745
+            -359.608 -261.271  -444.5 0  -359.608 261.271  -137.358 422.745
+            137.358 422.745  359.608 261.271  444.5 0))
+      (outline (path signal 120  -240 -1570  4740 -1570))
+      (outline (path signal 120  -1620 2670  -1620 -1180))
+      (outline (path signal 120  6120 2670  -1620 2670))
+      (outline (path signal 120  6120 -1180  6120 2670))
+      (outline (path signal 100  3900 2550  3900 5850))
+      (outline (path signal 100  600 2550  600 5850))
+      (outline (path signal 100  6000 2550  -1500 2550))
+      (outline (path signal 100  -850 -1450  -850 -4000))
+      (outline (path signal 100  5350 -1450  5350 -4000))
+      (outline (path signal 100  5350 -1450  -850 -1450))
+      (outline (path signal 100  -1500 -4000  -1500 2550))
+      (outline (path signal 100  -850 -4000  -1500 -4000))
+      (outline (path signal 100  6000 -4000  5350 -4000))
+      (outline (path signal 100  6000 2550  6000 -4000))
+      (outline (path signal 100  600 5850  3900 5850))
+      (outline (path signal 50  4400 -1700  4400 -4250))
+      (outline (path signal 50  100 -4300  100 -1700))
+      (outline (path signal 50  350 2800  -1750 2800))
+      (outline (path signal 50  350 6100  350 2800))
+      (outline (path signal 50  4150 6100  350 6100))
+      (outline (path signal 50  4150 2800  4150 6100))
+      (outline (path signal 50  6250 2800  4150 2800))
+      (outline (path signal 50  100 -1700  4400 -1700))
+      (outline (path signal 50  6250 -1100  6250 2800))
+      (outline (path signal 50  7100 -1100  6250 -1100))
+      (outline (path signal 50  7100 -4250  7100 -1100))
+      (outline (path signal 50  4400 -4250  7100 -4250))
+      (outline (path signal 50  -1750 -1150  -1750 2800))
+      (outline (path signal 50  -2600 -1150  -1750 -1150))
+      (outline (path signal 50  -2600 -4250  -2600 -1150))
+      (outline (path signal 50  200 -4250  -2600 -4250))
+      (outline (path signal 120  6120 -3820  6120 -4120))
+      (outline (path signal 120  6120 -4120  5230 -4120))
+      (outline (path signal 120  5230 -4120  5230 -3770))
+      (pin Round[A]Pad_1700_um (rotate 180) 1 0 0)
+      (pin Round[A]Pad_1700_um (rotate 180) 2 4500 0)
+      (pin Round[A]Pad_2200_um (rotate 180) @1 -1250 -2500)
+      (pin Round[A]Pad_2200_um (rotate 180) @2 5750 -2500)
+    )
+    (image Resistor_SMD:R_1210_3225Metric_Pad1.42x2.65mm_HandSolder
+      (outline (path signal 50  2450 -1580  -2450 -1580))
+      (outline (path signal 50  2450 1580  2450 -1580))
+      (outline (path signal 50  -2450 1580  2450 1580))
+      (outline (path signal 50  -2450 -1580  -2450 1580))
+      (outline (path signal 120  -602.064 -1360  602.064 -1360))
+      (outline (path signal 120  -602.064 1360  602.064 1360))
+      (outline (path signal 100  1600 -1250  -1600 -1250))
+      (outline (path signal 100  1600 1250  1600 -1250))
+      (outline (path signal 100  -1600 1250  1600 1250))
+      (outline (path signal 100  -1600 -1250  -1600 1250))
+      (pin RoundRect[T]Pad_1425x2650_250.951_um 2 1487.5 0)
+      (pin RoundRect[T]Pad_1425x2650_250.951_um 1 -1487.5 0)
+    )
+    (image "Package_TO_SOT_SMD:TSOT-23"
+      (outline (path signal 50  2170 -1700  -2170 -1700))
+      (outline (path signal 50  2170 -1700  2170 1700))
+      (outline (path signal 50  -2170 1700  -2170 -1700))
+      (outline (path signal 50  -2170 1700  2170 1700))
+      (outline (path signal 100  880 1450  880 -1450))
+      (outline (path signal 100  880 -1450  -880 -1450))
+      (outline (path signal 100  -880 1000  -880 -1450))
+      (outline (path signal 100  880 1450  -430 1450))
+      (outline (path signal 100  -880 1000  -430 1450))
+      (outline (path signal 120  930 1510  -1500 1510))
+      (outline (path signal 120  950 1500  950 500))
+      (outline (path signal 120  950 -1550  -900 -1550))
+      (outline (path signal 120  950 -500  950 -1550))
+      (pin Rect[T]Pad_1220x650_um 3 1310 0)
+      (pin Rect[T]Pad_1220x650_um 2 -1310 -950)
+      (pin Rect[T]Pad_1220x650_um 1 -1310 950)
+    )
+    (image "Package_TO_SOT_SMD:SOT-23"
+      (outline (path signal 120  760 -1580  -700 -1580))
+      (outline (path signal 120  760 1580  -1400 1580))
+      (outline (path signal 50  -1700 -1750  -1700 1750))
+      (outline (path signal 50  1700 -1750  -1700 -1750))
+      (outline (path signal 50  1700 1750  1700 -1750))
+      (outline (path signal 50  -1700 1750  1700 1750))
+      (outline (path signal 120  760 1580  760 650))
+      (outline (path signal 120  760 -1580  760 -650))
+      (outline (path signal 100  -700 -1520  700 -1520))
+      (outline (path signal 100  700 1520  700 -1520))
+      (outline (path signal 100  -700 950  -150 1520))
+      (outline (path signal 100  -150 1520  700 1520))
+      (outline (path signal 100  -700 950  -700 -1500))
+      (pin Rect[T]Pad_900x800_um 3 1000 0)
+      (pin Rect[T]Pad_900x800_um 2 -1000 -950)
+      (pin Rect[T]Pad_900x800_um 1 -1000 950)
+    )
+    (image "Package_SO:TSSOP-8_4.4x3mm_P0.65mm"
+      (outline (path signal 150  -2325 1525  -3675 1525))
+      (outline (path signal 150  -2325 -1625  2325 -1625))
+      (outline (path signal 150  -2325 1625  2325 1625))
+      (outline (path signal 150  -2325 -1625  -2325 -1425))
+      (outline (path signal 150  2325 -1625  2325 -1425))
+      (outline (path signal 150  2325 1625  2325 1425))
+      (outline (path signal 150  -2325 1625  -2325 1525))
+      (outline (path signal 50  -3950 -1800  3950 -1800))
+      (outline (path signal 50  -3950 1800  3950 1800))
+      (outline (path signal 50  3950 1800  3950 -1800))
+      (outline (path signal 50  -3950 1800  -3950 -1800))
+      (outline (path signal 150  -2200 500  -1200 1500))
+      (outline (path signal 150  -2200 -1500  -2200 500))
+      (outline (path signal 150  2200 -1500  -2200 -1500))
+      (outline (path signal 150  2200 1500  2200 -1500))
+      (outline (path signal 150  -1200 1500  2200 1500))
+      (pin Rect[T]Pad_1450x450_um 8 2950 975)
+      (pin Rect[T]Pad_1450x450_um 7 2950 325)
+      (pin Rect[T]Pad_1450x450_um 6 2950 -325)
+      (pin Rect[T]Pad_1450x450_um 5 2950 -975)
+      (pin Rect[T]Pad_1450x450_um 4 -2950 -975)
+      (pin Rect[T]Pad_1450x450_um 3 -2950 -325)
+      (pin Rect[T]Pad_1450x450_um 2 -2950 325)
+      (pin Rect[T]Pad_1450x450_um 1 -2950 975)
+    )
+    (image "Connector_IDC:IDC-Header_2x03_P2.54mm_Vertical"
+      (outline (path signal 120  -3655 5600  -1115 5600))
+      (outline (path signal 120  -3655 5600  -3655 3060))
+      (outline (path signal 120  -3405 5350  5945 5350))
+      (outline (path signal 120  -3405 -10430  -3405 5350))
+      (outline (path signal 120  5945 -10430  -3405 -10430))
+      (outline (path signal 120  5945 5350  5945 -10430))
+      (outline (path signal 50  -3410 5350  5950 5350))
+      (outline (path signal 50  -3410 -10430  -3410 5350))
+      (outline (path signal 50  5950 -10430  -3410 -10430))
+      (outline (path signal 50  5950 5350  5950 -10430))
+      (outline (path signal 100  -3155 -10180  -2605 -9620))
+      (outline (path signal 100  -3155 5100  -2605 4560))
+      (outline (path signal 100  5695 -10180  5145 -9620))
+      (outline (path signal 100  5695 5100  5145 4560))
+      (outline (path signal 100  5145 -9620  -2605 -9620))
+      (outline (path signal 100  5695 -10180  -3155 -10180))
+      (outline (path signal 100  5145 4560  -2605 4560))
+      (outline (path signal 100  5695 5100  -3155 5100))
+      (outline (path signal 100  -2605 -4790  -3155 -4790))
+      (outline (path signal 100  -2605 -290  -3155 -290))
+      (outline (path signal 100  -2605 -4790  -2605 -9620))
+      (outline (path signal 100  -2605 4560  -2605 -290))
+      (outline (path signal 100  -3155 5100  -3155 -10180))
+      (outline (path signal 100  5145 4560  5145 -9620))
+      (outline (path signal 100  5695 5100  5695 -10180))
+      (pin Oval[A]Pad_1727.2x1727.2_um 6 2540 -5080)
+      (pin Oval[A]Pad_1727.2x1727.2_um 5 0 -5080)
+      (pin Oval[A]Pad_1727.2x1727.2_um 4 2540 -2540)
+      (pin Oval[A]Pad_1727.2x1727.2_um 3 0 -2540)
+      (pin Oval[A]Pad_1727.2x1727.2_um 2 2540 0)
+      (pin Rect[A]Pad_1727.2x1727.2_um 1 0 0)
+    )
+    (image "Connector_Molex:Molex_KK-254_AE-6410-04A_1x04_P2.54mm_Vertical"
+      (outline (path signal 50  9390 3420  -1770 3420))
+      (outline (path signal 50  9390 -3380  9390 3420))
+      (outline (path signal 50  -1770 -3380  9390 -3380))
+      (outline (path signal 50  -1770 3420  -1770 -3380))
+      (outline (path signal 120  8420 2430  8420 3030))
+      (outline (path signal 120  6820 2430  8420 2430))
+      (outline (path signal 120  6820 3030  6820 2430))
+      (outline (path signal 120  5880 2430  5880 3030))
+      (outline (path signal 120  4280 2430  5880 2430))
+      (outline (path signal 120  4280 3030  4280 2430))
+      (outline (path signal 120  3340 2430  3340 3030))
+      (outline (path signal 120  1740 2430  3340 2430))
+      (outline (path signal 120  1740 3030  1740 2430))
+      (outline (path signal 120  800 2430  800 3030))
+      (outline (path signal 120  -800 2430  800 2430))
+      (outline (path signal 120  -800 3030  -800 2430))
+      (outline (path signal 120  7370 -2990  7370 -1990))
+      (outline (path signal 120  250 -2990  250 -1990))
+      (outline (path signal 120  7370 -1460  7620 -1990))
+      (outline (path signal 120  250 -1460  7370 -1460))
+      (outline (path signal 120  0 -1990  250 -1460))
+      (outline (path signal 120  7620 -1990  7620 -2990))
+      (outline (path signal 120  0 -1990  7620 -1990))
+      (outline (path signal 120  0 -2990  0 -1990))
+      (outline (path signal 100  -562.893 0  -1270 -500))
+      (outline (path signal 100  -1270 500  -562.893 0))
+      (outline (path signal 120  -1670 2000  -1670 -2000))
+      (outline (path signal 120  9000 3030  -1380 3030))
+      (outline (path signal 120  9000 -2990  9000 3030))
+      (outline (path signal 120  -1380 -2990  9000 -2990))
+      (outline (path signal 120  -1380 3030  -1380 -2990))
+      (outline (path signal 100  8890 2920  -1270 2920))
+      (outline (path signal 100  8890 -2880  8890 2920))
+      (outline (path signal 100  -1270 -2880  8890 -2880))
+      (outline (path signal 100  -1270 2920  -1270 -2880))
+      (pin Oval[A]Pad_1740x2200_um 4 7620 0)
+      (pin Oval[A]Pad_1740x2200_um 3 5080 0)
+      (pin Oval[A]Pad_1740x2200_um 2 2540 0)
+      (pin RoundRect[A]Pad_1740x2200_250.95_um 1 0 0)
+    )
+    (image "Connector_Molex:Molex_KK-254_AE-6410-05A_1x05_P2.54mm_Vertical"
+      (outline (path signal 50  11930 3420  -1770 3420))
+      (outline (path signal 50  11930 -3380  11930 3420))
+      (outline (path signal 50  -1770 -3380  11930 -3380))
+      (outline (path signal 50  -1770 3420  -1770 -3380))
+      (outline (path signal 120  10960 2430  10960 3030))
+      (outline (path signal 120  9360 2430  10960 2430))
+      (outline (path signal 120  9360 3030  9360 2430))
+      (outline (path signal 120  8420 2430  8420 3030))
+      (outline (path signal 120  6820 2430  8420 2430))
+      (outline (path signal 120  6820 3030  6820 2430))
+      (outline (path signal 120  5880 2430  5880 3030))
+      (outline (path signal 120  4280 2430  5880 2430))
+      (outline (path signal 120  4280 3030  4280 2430))
+      (outline (path signal 120  3340 2430  3340 3030))
+      (outline (path signal 120  1740 2430  3340 2430))
+      (outline (path signal 120  1740 3030  1740 2430))
+      (outline (path signal 120  800 2430  800 3030))
+      (outline (path signal 120  -800 2430  800 2430))
+      (outline (path signal 120  -800 3030  -800 2430))
+      (outline (path signal 120  9910 -2990  9910 -1990))
+      (outline (path signal 120  250 -2990  250 -1990))
+      (outline (path signal 120  9910 -1460  10160 -1990))
+      (outline (path signal 120  250 -1460  9910 -1460))
+      (outline (path signal 120  0 -1990  250 -1460))
+      (outline (path signal 120  10160 -1990  10160 -2990))
+      (outline (path signal 120  0 -1990  10160 -1990))
+      (outline (path signal 120  0 -2990  0 -1990))
+      (outline (path signal 100  -562.893 0  -1270 -500))
+      (outline (path signal 100  -1270 500  -562.893 0))
+      (outline (path signal 120  -1670 2000  -1670 -2000))
+      (outline (path signal 120  11540 3030  -1380 3030))
+      (outline (path signal 120  11540 -2990  11540 3030))
+      (outline (path signal 120  -1380 -2990  11540 -2990))
+      (outline (path signal 120  -1380 3030  -1380 -2990))
+      (outline (path signal 100  11430 2920  -1270 2920))
+      (outline (path signal 100  11430 -2880  11430 2920))
+      (outline (path signal 100  -1270 -2880  11430 -2880))
+      (outline (path signal 100  -1270 2920  -1270 -2880))
+      (pin Oval[A]Pad_1740x2200_um 5 10160 0)
+      (pin Oval[A]Pad_1740x2200_um 4 7620 0)
+      (pin Oval[A]Pad_1740x2200_um 3 5080 0)
+      (pin Oval[A]Pad_1740x2200_um 2 2540 0)
+      (pin RoundRect[A]Pad_1740x2200_250.95_um 1 0 0)
+    )
+    (image Connector_PinHeader_2.54mm:PinHeader_1x06_P2.54mm_Vertical
+      (outline (path signal 50  1800 1800  -1800 1800))
+      (outline (path signal 50  1800 -14500  1800 1800))
+      (outline (path signal 50  -1800 -14500  1800 -14500))
+      (outline (path signal 50  -1800 1800  -1800 -14500))
+      (outline (path signal 120  -1330 1330  0 1330))
+      (outline (path signal 120  -1330 0  -1330 1330))
+      (outline (path signal 120  -1330 -1270  1330 -1270))
+      (outline (path signal 120  1330 -1270  1330 -14030))
+      (outline (path signal 120  -1330 -1270  -1330 -14030))
+      (outline (path signal 120  -1330 -14030  1330 -14030))
+      (outline (path signal 100  -1270 635  -635 1270))
+      (outline (path signal 100  -1270 -13970  -1270 635))
+      (outline (path signal 100  1270 -13970  -1270 -13970))
+      (outline (path signal 100  1270 1270  1270 -13970))
+      (outline (path signal 100  -635 1270  1270 1270))
+      (pin Oval[A]Pad_1700x1700_um 6 0 -12700)
+      (pin Oval[A]Pad_1700x1700_um 5 0 -10160)
+      (pin Oval[A]Pad_1700x1700_um 4 0 -7620)
+      (pin Oval[A]Pad_1700x1700_um 3 0 -5080)
+      (pin Oval[A]Pad_1700x1700_um 2 0 -2540)
+      (pin Rect[A]Pad_1700x1700_um 1 0 0)
+    )
+    (image MountingHole:MountingHole_2.7mm_M2.5_Pad_Via
+      (outline (path signal 50  2950 0  2870.48 -680.317  2636.22 -1323.96  2259.83 -1896.22
+            1761.62 -2366.26  1168.43 -2708.74  512.262 -2905.18  -171.527 -2945.01
+            -846.07 -2826.07  -1475 -2554.78  -2024.41 -2145.75  -2464.69 -1621.05
+            -2772.09 -1008.96  -2930.05 -342.474  -2930.05 342.474  -2772.09 1008.96
+            -2464.69 1621.05  -2024.41 2145.75  -1475 2554.78  -846.07 2826.07
+            -171.527 2945.01  512.262 2905.18  1168.43 2708.74  1761.62 2366.26
+            2259.83 1896.22  2636.22 1323.96  2870.48 680.317  2950 0))
+      (outline (path signal 150  2700 0  2621.54 -646.152  2390.73 -1254.75  2020.98 -1790.43
+            1533.78 -2222.06  957.433 -2524.54  325.449 -2680.31  -325.449 -2680.31
+            -957.433 -2524.54  -1533.78 -2222.06  -2020.98 -1790.43  -2390.73 -1254.75
+            -2621.54 -646.152  -2700 0  -2621.54 646.152  -2390.73 1254.75
+            -2020.98 1790.43  -1533.78 2222.06  -957.433 2524.54  -325.449 2680.31
+            325.449 2680.31  957.433 2524.54  1533.78 2222.06  2020.98 1790.43
+            2390.73 1254.75  2621.54 646.152  2700 0))
+      (pin Round[A]Pad_800_um 1 1431.89 1431.89)
+      (pin Round[A]Pad_800_um 1@1 0 2025)
+      (pin Round[A]Pad_800_um 1@2 -1431.89 1431.89)
+      (pin Round[A]Pad_800_um 1@3 -2025 0)
+      (pin Round[A]Pad_800_um 1@4 -1431.89 -1431.89)
+      (pin Round[A]Pad_800_um 1@5 0 -2025)
+      (pin Round[A]Pad_800_um 1@6 1431.89 -1431.89)
+      (pin Round[A]Pad_800_um 1@7 2025 0)
+      (pin Round[A]Pad_5400_um 1@8 0 0)
+    )
+    (image LED_SMD:LED_1210_3225Metric_Pad1.42x2.65mm_HandSolder
+      (outline (path signal 50  2450 -1580  -2450 -1580))
+      (outline (path signal 50  2450 1580  2450 -1580))
+      (outline (path signal 50  -2450 1580  2450 1580))
+      (outline (path signal 50  -2450 -1580  -2450 1580))
+      (outline (path signal 120  -2460 -1585  1600 -1585))
+      (outline (path signal 120  -2460 1585  -2460 -1585))
+      (outline (path signal 120  1600 1585  -2460 1585))
+      (outline (path signal 100  1600 -1250  1600 1250))
+      (outline (path signal 100  -1600 -1250  1600 -1250))
+      (outline (path signal 100  -1600 625  -1600 -1250))
+      (outline (path signal 100  -975 1250  -1600 625))
+      (outline (path signal 100  1600 1250  -975 1250))
+      (pin RoundRect[T]Pad_1425x2650_250.951_um 2 1487.5 0)
+      (pin RoundRect[T]Pad_1425x2650_250.951_um 1 -1487.5 0)
+    )
+    (image "Diode_THT:D_DO-34_SOD68_P7.62mm_Horizontal"
+      (outline (path signal 50  8630 1050  -1000 1050))
+      (outline (path signal 50  8630 -1050  8630 1050))
+      (outline (path signal 50  -1000 -1050  8630 -1050))
+      (outline (path signal 50  -1000 1050  -1000 -1050))
+      (outline (path signal 120  2626 920  2626 -920))
+      (outline (path signal 120  2866 920  2866 -920))
+      (outline (path signal 120  2746 920  2746 -920))
+      (outline (path signal 120  6630 0  5450 0))
+      (outline (path signal 120  990 0  2170 0))
+      (outline (path signal 120  5450 920  2170 920))
+      (outline (path signal 120  5450 -920  5450 920))
+      (outline (path signal 120  2170 -920  5450 -920))
+      (outline (path signal 120  2170 920  2170 -920))
+      (outline (path signal 100  2646 800  2646 -800))
+      (outline (path signal 100  2846 800  2846 -800))
+      (outline (path signal 100  2746 800  2746 -800))
+      (outline (path signal 100  7620 0  5330 0))
+      (outline (path signal 100  0 0  2290 0))
+      (outline (path signal 100  5330 800  2290 800))
+      (outline (path signal 100  5330 -800  5330 800))
+      (outline (path signal 100  2290 -800  5330 -800))
+      (outline (path signal 100  2290 800  2290 -800))
+      (pin Oval[A]Pad_1500x1500_um 2 7620 0)
+      (pin Rect[A]Pad_1500x1500_um 1 0 0)
+    )
+    (padstack Round[A]Pad_1500_um
+      (shape (circle F.Cu 1500))
+      (shape (circle B.Cu 1500))
+      (attach off)
+    )
+    (padstack Round[A]Pad_1700_um
+      (shape (circle F.Cu 1700))
+      (shape (circle B.Cu 1700))
+      (attach off)
+    )
+    (padstack Round[A]Pad_2200_um
+      (shape (circle F.Cu 2200))
+      (shape (circle B.Cu 2200))
+      (attach off)
+    )
+    (padstack Round[A]Pad_500_um
+      (shape (circle F.Cu 500))
+      (shape (circle B.Cu 500))
+      (attach off)
+    )
+    (padstack Round[A]Pad_5400_um
+      (shape (circle F.Cu 5400))
+      (shape (circle B.Cu 5400))
+      (attach off)
+    )
+    (padstack Round[A]Pad_800_um
+      (shape (circle F.Cu 800))
+      (shape (circle B.Cu 800))
+      (attach off)
+    )
+    (padstack Oval[A]Pad_1150x1800_um
+      (shape (path F.Cu 1150  0 -325  0 325))
+      (shape (path B.Cu 1150  0 -325  0 325))
+      (attach off)
+    )
+    (padstack Oval[A]Pad_1450x2000_um
+      (shape (path F.Cu 1450  0 -275  0 275))
+      (shape (path B.Cu 1450  0 -275  0 275))
+      (attach off)
+    )
+    (padstack Oval[A]Pad_1500x1500_um
+      (shape (path F.Cu 1500  0 0  0 0))
+      (shape (path B.Cu 1500  0 0  0 0))
+      (attach off)
+    )
+    (padstack Oval[A]Pad_1700x2000_um
+      (shape (path F.Cu 1700  0 -150  0 150))
+      (shape (path B.Cu 1700  0 -150  0 150))
+      (attach off)
+    )
+    (padstack Oval[A]Pad_1700x1700_um
+      (shape (path F.Cu 1700  0 0  0 0))
+      (shape (path B.Cu 1700  0 0  0 0))
+      (attach off)
+    )
+    (padstack Oval[A]Pad_1727.2x1727.2_um
+      (shape (path F.Cu 1727.2  0 0  0 0))
+      (shape (path B.Cu 1727.2  0 0  0 0))
+      (attach off)
+    )
+    (padstack Oval[A]Pad_1740x2200_um
+      (shape (path F.Cu 1740  0 -230  0 230))
+      (shape (path B.Cu 1740  0 -230  0 230))
+      (attach off)
+    )
+    (padstack Oval[A]Pad_1980x3960_um
+      (shape (path F.Cu 1980  0 -990  0 990))
+      (shape (path B.Cu 1980  0 -990  0 990))
+      (attach off)
+    )
+    (padstack Oval[A]Pad_800x800_um
+      (shape (path F.Cu 800  0 0  0 0))
+      (shape (path B.Cu 800  0 0  0 0))
+      (attach off)
+    )
+    (padstack RoundRect[B]Pad_2410x3100_250.949_um
+      (shape (polygon B.Cu 0  998.579 1547.14  1040.83 1535.82  1080.48 1517.33  1116.31 1492.24
+            1147.24 1461.31  1172.33 1425.48  1190.82 1385.83  1202.14 1343.58
+            1205.95 1300  1205.95 -1300  1202.14 -1343.58  1190.82 -1385.83
+            1172.33 -1425.48  1147.24 -1461.31  1116.31 -1492.24  1080.48 -1517.33
+            1040.83 -1535.82  998.579 -1547.14  955.002 -1550.95  -955.002 -1550.95
+            -998.579 -1547.14  -1040.83 -1535.82  -1080.48 -1517.33  -1116.31 -1492.24
+            -1147.24 -1461.31  -1172.33 -1425.48  -1190.82 -1385.83  -1202.14 -1343.58
+            -1205.95 -1300  -1205.95 1300  -1202.14 1343.58  -1190.82 1385.83
+            -1172.33 1425.48  -1147.24 1461.31  -1116.31 1492.24  -1080.48 1517.33
+            -1040.83 1535.82  -998.579 1547.14  -955.002 1550.95  955.002 1550.95
+            998.579 1547.14))
+      (attach off)
+    )
+    (padstack RoundRect[T]Pad_975x1400_244.678_um
+      (shape (polygon F.Cu 0  286.238 697.211  327.435 686.172  366.089 668.147  401.026 643.684
+            431.184 613.526  455.647 578.589  473.672 539.935  484.711 498.738
+            488.428 456.25  488.428 -456.25  484.711 -498.738  473.672 -539.935
+            455.647 -578.589  431.184 -613.526  401.026 -643.684  366.089 -668.147
+            327.435 -686.172  286.238 -697.211  243.75 -700.928  -243.75 -700.928
+            -286.238 -697.211  -327.435 -686.172  -366.089 -668.147  -401.026 -643.684
+            -431.184 -613.526  -455.647 -578.589  -473.672 -539.935  -484.711 -498.738
+            -488.428 -456.25  -488.428 456.25  -484.711 498.738  -473.672 539.935
+            -455.647 578.589  -431.184 613.526  -401.026 643.684  -366.089 668.147
+            -327.435 686.172  -286.238 697.211  -243.75 700.928  243.75 700.928
+            286.238 697.211))
+      (attach off)
+    )
+    (padstack RoundRect[T]Pad_1150x1400_250.95_um
+      (shape (polygon F.Cu 0  368.578 697.139  410.831 685.817  450.476 667.33  486.309 642.24
+            517.24 611.309  542.33 575.476  560.817 535.831  572.139 493.578
+            575.951 450.001  575.951 -450.001  572.139 -493.578  560.817 -535.831
+            542.33 -575.476  517.24 -611.309  486.309 -642.24  450.476 -667.33
+            410.831 -685.817  368.578 -697.139  325.001 -700.951  -325.001 -700.951
+            -368.578 -697.139  -410.831 -685.817  -450.476 -667.33  -486.309 -642.24
+            -517.24 -611.309  -542.33 -575.476  -560.817 -535.831  -572.139 -493.578
+            -575.951 -450.001  -575.951 450.001  -572.139 493.578  -560.817 535.831
+            -542.33 575.476  -517.24 611.309  -486.309 642.24  -450.476 667.33
+            -410.831 685.817  -368.578 697.139  -325.001 700.951  325.001 700.951
+            368.578 697.139))
+      (attach off)
+    )
+    (padstack RoundRect[T]Pad_1225x4750_250.951_um
+      (shape (polygon F.Cu 0  406.077 2372.14  448.33 2360.82  487.975 2342.33  523.808 2317.24
+            554.74 2286.31  579.83 2250.48  598.317 2210.83  609.638 2168.58
+            613.451 2125  613.451 -2125  609.638 -2168.58  598.317 -2210.83
+            579.83 -2250.48  554.74 -2286.31  523.808 -2317.24  487.976 -2342.33
+            448.33 -2360.82  406.077 -2372.14  362.5 -2375.95  -362.5 -2375.95
+            -406.077 -2372.14  -448.33 -2360.82  -487.975 -2342.33  -523.808 -2317.24
+            -554.74 -2286.31  -579.83 -2250.48  -598.317 -2210.83  -609.638 -2168.58
+            -613.451 -2125  -613.451 2125  -609.638 2168.58  -598.317 2210.83
+            -579.83 2250.48  -554.74 2286.31  -523.808 2317.24  -487.976 2342.33
+            -448.33 2360.82  -406.077 2372.14  -362.5 2375.95  362.5 2375.95
+            406.077 2372.14))
+      (attach off)
+    )
+    (padstack RoundRect[T]Pad_1425x2650_250.951_um
+      (shape (polygon F.Cu 0  506.077 1322.14  548.33 1310.82  587.975 1292.33  623.808 1267.24
+            654.74 1236.31  679.83 1200.48  698.317 1160.83  709.638 1118.58
+            713.451 1075  713.451 -1075  709.638 -1118.58  698.317 -1160.83
+            679.83 -1200.47  654.74 -1236.31  623.808 -1267.24  587.976 -1292.33
+            548.33 -1310.82  506.077 -1322.14  462.5 -1325.95  -462.5 -1325.95
+            -506.077 -1322.14  -548.33 -1310.82  -587.975 -1292.33  -623.808 -1267.24
+            -654.74 -1236.31  -679.83 -1200.48  -698.317 -1160.83  -709.638 -1118.58
+            -713.451 -1075  -713.451 1075  -709.638 1118.58  -698.317 1160.83
+            -679.83 1200.47  -654.74 1236.31  -623.808 1267.24  -587.976 1292.33
+            -548.33 1310.82  -506.077 1322.14  -462.5 1325.95  462.5 1325.95
+            506.077 1322.14))
+      (attach off)
+    )
+    (padstack RoundRect[T]Pad_1425x1750_250.951_um
+      (shape (polygon F.Cu 0  506.077 872.138  548.33 860.817  587.975 842.33  623.808 817.24
+            654.74 786.308  679.83 750.476  698.317 710.83  709.638 668.577
+            713.451 625  713.451 -625  709.638 -668.577  698.317 -710.83
+            679.83 -750.475  654.74 -786.308  623.808 -817.24  587.976 -842.33
+            548.33 -860.817  506.077 -872.138  462.5 -875.951  -462.5 -875.951
+            -506.077 -872.138  -548.33 -860.817  -587.975 -842.33  -623.808 -817.24
+            -654.74 -786.308  -679.83 -750.476  -698.317 -710.83  -709.638 -668.577
+            -713.451 -625  -713.451 625  -709.638 668.577  -698.317 710.83
+            -679.83 750.475  -654.74 786.308  -623.808 817.24  -587.976 842.33
+            -548.33 860.817  -506.077 872.138  -462.5 875.951  462.5 875.951
+            506.077 872.138))
+      (attach off)
+    )
+    (padstack RoundRect[A]Pad_1700x2000_250.951_um
+      (shape (polygon F.Cu 0  643.577 997.138  685.83 985.817  725.475 967.33  761.308 942.24
+            792.24 911.308  817.33 875.476  835.817 835.83  847.138 793.577
+            850.951 750  850.951 -750  847.138 -793.577  835.817 -835.83
+            817.33 -875.475  792.24 -911.308  761.308 -942.24  725.476 -967.33
+            685.83 -985.817  643.577 -997.138  600 -1000.95  -600 -1000.95
+            -643.577 -997.138  -685.83 -985.817  -725.475 -967.33  -761.308 -942.24
+            -792.24 -911.308  -817.33 -875.476  -835.817 -835.83  -847.138 -793.577
+            -850.951 -750  -850.951 750  -847.138 793.577  -835.817 835.83
+            -817.33 875.475  -792.24 911.308  -761.308 942.24  -725.476 967.33
+            -685.83 985.817  -643.577 997.138  -600 1000.95  600 1000.95
+            643.577 997.138))
+      (shape (polygon B.Cu 0  643.577 997.138  685.83 985.817  725.475 967.33  761.308 942.24
+            792.24 911.308  817.33 875.476  835.817 835.83  847.138 793.577
+            850.951 750  850.951 -750  847.138 -793.577  835.817 -835.83
+            817.33 -875.475  792.24 -911.308  761.308 -942.24  725.476 -967.33
+            685.83 -985.817  643.577 -997.138  600 -1000.95  -600 -1000.95
+            -643.577 -997.138  -685.83 -985.817  -725.475 -967.33  -761.308 -942.24
+            -792.24 -911.308  -817.33 -875.476  -835.817 -835.83  -847.138 -793.577
+            -850.951 -750  -850.951 750  -847.138 793.577  -835.817 835.83
+            -817.33 875.475  -792.24 911.308  -761.308 942.24  -725.476 967.33
+            -685.83 985.817  -643.577 997.138  -600 1000.95  600 1000.95
+            643.577 997.138))
+      (attach off)
+    )
+    (padstack RoundRect[A]Pad_1740x2200_250.95_um
+      (shape (polygon F.Cu 0  663.578 1097.14  705.831 1085.82  745.476 1067.33  781.309 1042.24
+            812.24 1011.31  837.33 975.476  855.817 935.831  867.139 893.578
+            870.951 850.001  870.951 -850.001  867.139 -893.578  855.817 -935.831
+            837.33 -975.476  812.24 -1011.31  781.309 -1042.24  745.476 -1067.33
+            705.831 -1085.82  663.578 -1097.14  620.001 -1100.95  -620.001 -1100.95
+            -663.578 -1097.14  -705.831 -1085.82  -745.476 -1067.33  -781.309 -1042.24
+            -812.24 -1011.31  -837.33 -975.476  -855.817 -935.831  -867.139 -893.578
+            -870.951 -850.001  -870.951 850.001  -867.139 893.578  -855.817 935.831
+            -837.33 975.476  -812.24 1011.31  -781.309 1042.24  -745.476 1067.33
+            -705.831 1085.82  -663.578 1097.14  -620.001 1100.95  620.001 1100.95
+            663.578 1097.14))
+      (shape (polygon B.Cu 0  663.578 1097.14  705.831 1085.82  745.476 1067.33  781.309 1042.24
+            812.24 1011.31  837.33 975.476  855.817 935.831  867.139 893.578
+            870.951 850.001  870.951 -850.001  867.139 -893.578  855.817 -935.831
+            837.33 -975.476  812.24 -1011.31  781.309 -1042.24  745.476 -1067.33
+            705.831 -1085.82  663.578 -1097.14  620.001 -1100.95  -620.001 -1100.95
+            -663.578 -1097.14  -705.831 -1085.82  -745.476 -1067.33  -781.309 -1042.24
+            -812.24 -1011.31  -837.33 -975.476  -855.817 -935.831  -867.139 -893.578
+            -870.951 -850.001  -870.951 850.001  -867.139 893.578  -855.817 935.831
+            -837.33 975.476  -812.24 1011.31  -781.309 1042.24  -745.476 1067.33
+            -705.831 1085.82  -663.578 1097.14  -620.001 1100.95  620.001 1100.95
+            663.578 1097.14))
+      (attach off)
+    )
+    (padstack RoundRect[T]Pad_1600x600_150.571_um
+      (shape (polygon F.Cu 0  676.146 298.283  701.498 291.49  725.285 280.398  746.785 265.344
+            765.344 246.785  780.398 225.286  791.49 201.498  798.283 176.146
+            800.571 150  800.571 -150  798.283 -176.146  791.49 -201.498
+            780.398 -225.285  765.344 -246.785  746.785 -265.344  725.286 -280.398
+            701.498 -291.49  676.146 -298.283  650 -300.571  -650 -300.571
+            -676.146 -298.283  -701.498 -291.49  -725.285 -280.398  -746.785 -265.344
+            -765.344 -246.785  -780.398 -225.286  -791.49 -201.498  -798.283 -176.146
+            -800.571 -150  -800.571 150  -798.283 176.146  -791.49 201.498
+            -780.398 225.285  -765.344 246.785  -746.785 265.344  -725.286 280.398
+            -701.498 291.49  -676.146 298.283  -650 300.571  650 300.571
+            676.146 298.283))
+      (attach off)
+    )
+    (padstack RoundRect[T]Pad_2410x3100_251.594_um
+      (shape (polygon F.Cu 0  998.049 1547.13  1040.41 1535.78  1080.16 1517.25  1116.08 1492.09
+            1147.09 1461.08  1172.25 1425.16  1190.78 1385.41  1202.13 1343.05
+            1205.95 1299.36  1205.95 -1299.36  1202.13 -1343.05  1190.78 -1385.41
+            1172.25 -1425.16  1147.09 -1461.08  1116.08 -1492.09  1080.16 -1517.25
+            1040.41 -1535.78  998.049 -1547.13  954.36 -1550.95  -954.36 -1550.95
+            -998.049 -1547.13  -1040.41 -1535.78  -1080.16 -1517.25  -1116.08 -1492.09
+            -1147.09 -1461.08  -1172.25 -1425.16  -1190.78 -1385.41  -1202.13 -1343.05
+            -1205.95 -1299.36  -1205.95 1299.36  -1202.13 1343.05  -1190.78 1385.41
+            -1172.25 1425.16  -1147.09 1461.08  -1116.08 1492.09  -1080.16 1517.25
+            -1040.41 1535.78  -998.049 1547.13  -954.36 1550.95  954.36 1550.95
+            998.049 1547.13))
+      (attach off)
+    )
+    (padstack Rect[T]Pad_4000x3000_um
+      (shape (rect F.Cu -2000 -1500 2000 1500))
+      (attach off)
+    )
+    (padstack Rect[T]Pad_450x1300_um
+      (shape (rect F.Cu -225 -650 225 650))
+      (attach off)
+    )
+    (padstack Rect[T]Pad_700x1600_um
+      (shape (rect F.Cu -350 -800 350 800))
+      (attach off)
+    )
+    (padstack Rect[T]Pad_890x305_um
+      (shape (rect F.Cu -445 -152.5 445 152.5))
+      (attach off)
+    )
+    (padstack Rect[T]Pad_900x800_um
+      (shape (rect F.Cu -450 -400 450 400))
+      (attach off)
+    )
+    (padstack Rect[T]Pad_1200x2200_um
+      (shape (rect F.Cu -600 -1100 600 1100))
+      (attach off)
+    )
+    (padstack Rect[T]Pad_1200x1400_um
+      (shape (rect F.Cu -600 -700 600 700))
+      (attach off)
+    )
+    (padstack Rect[T]Pad_1220x650_um
+      (shape (rect F.Cu -610 -325 610 325))
+      (attach off)
+    )
+    (padstack Rect[T]Pad_1400x300_um
+      (shape (rect F.Cu -700 -150 700 150))
+      (attach off)
+    )
+    (padstack Rect[T]Pad_1450x450_um
+      (shape (rect F.Cu -725 -225 725 225))
+      (attach off)
+    )
+    (padstack Rect[T]Pad_1500x2200_um
+      (shape (rect F.Cu -750 -1100 750 1100))
+      (attach off)
+    )
+    (padstack Rect[T]Pad_1500x600_um
+      (shape (rect F.Cu -750 -300 750 300))
+      (attach off)
+    )
+    (padstack Rect[A]Pad_1500x1500_um
+      (shape (rect F.Cu -750 -750 750 750))
+      (shape (rect B.Cu -750 -750 750 750))
+      (attach off)
+    )
+    (padstack Rect[T]Pad_1550x600_um
+      (shape (rect F.Cu -775 -300 775 300))
+      (attach off)
+    )
+    (padstack Rect[T]Pad_1560x650_um
+      (shape (rect F.Cu -780 -325 780 325))
+      (attach off)
+    )
+    (padstack Rect[T]Pad_1600x550_um
+      (shape (rect F.Cu -800 -275 800 275))
+      (attach off)
+    )
+    (padstack Rect[T]Pad_1600x1400_um
+      (shape (rect F.Cu -800 -700 800 700))
+      (attach off)
+    )
+    (padstack Rect[T]Pad_1680x1880_um
+      (shape (rect F.Cu -840 -940 840 940))
+      (attach off)
+    )
+    (padstack Rect[A]Pad_1700x1700_um
+      (shape (rect F.Cu -850 -850 850 850))
+      (shape (rect B.Cu -850 -850 850 850))
+      (attach off)
+    )
+    (padstack Rect[A]Pad_1727.2x1727.2_um
+      (shape (rect F.Cu -863.6 -863.6 863.6 863.6))
+      (shape (rect B.Cu -863.6 -863.6 863.6 863.6))
+      (attach off)
+    )
+    (padstack Rect[A]Pad_1980x3960_um
+      (shape (rect F.Cu -990 -1980 990 1980))
+      (shape (rect B.Cu -990 -1980 990 1980))
+      (attach off)
+    )
+    (padstack "Via[0-1]_800:400_um"
+      (shape (circle F.Cu 800))
+      (shape (circle B.Cu 800))
+      (attach off)
+    )
+  )
+  (network
+    (net GND
+      (pins BT1-2 XS1-6 XS1-6@1 XS1-6@2 XS1-6@3 XS1-6@4 J6-6 J6-6@1 J6-6@2 J6-6@3
+        J6-5 U8-11 U8-3 R25-2 R24-2 R23-2 J8-2 C27-2 C26-2 C25-2 C24-2 C20-2 U7-5
+        U6-3 U6-9@1 U6-9@2 U6-9@3 U6-9@4 U6-9@5 U6-9@6 U6-9@7 U4-7 U4-4 U4-3 U4-2
+        U4-1 U3-1 U2-13 U2-12 U2-11 U2-10 U2-9 U2-8 U2-7 U2-6 U2-5 U1-21 U1-5 U1-3
+        TH1-2 SW1-2 RT1-2 R22-2 R19-2 R15-2 R14-2 R13-2 Q3-2 Q1-7 Q1-6 J4-6 J3-2 J2-2
+        J1-2 J1-1 H4-1 H4-1@1 H4-1@2 H4-1@3 H4-1@4 H4-1@5 H4-1@6 H4-1@7 H4-1@8 H3-1
+        H3-1@1 H3-1@2 H3-1@3 H3-1@4 H3-1@5 H3-1@6 H3-1@7 H3-1@8 H2-1 H2-1@1 H2-1@2
+        H2-1@3 H2-1@4 H2-1@5 H2-1@6 H2-1@7 H2-1@8 H1-1 H1-1@1 H1-1@2 H1-1@3 H1-1@4
+        H1-1@5 H1-1@6 H1-1@7 H1-1@8 C23-2 C21-2 C19-2 C17-2 C16-2 C15-2 C14-2 C13-1
+        C12-1 C11-2 C9-2 C8-2 C7-2 C6-2 C5-2 C4-2 C3-1 C2-1 C1-2)
+    )
+    (net "Net-(BT1-Pad1)"
+      (pins BT1-1 U2-14)
+    )
+    (net +3V3
+      (pins XS1-4 U7-6 U4-8 U3-16 U1-18 U1-6 U1-4 R17-1 R5-1 R3-1 R2-1 R1-1 J4-2 J3-1
+        J2-1 J1-3 D1-1 C21-1 C14-1 C13-2 C8-1 C4-1 C3-2 C2-2 C1-1)
+    )
+    (net "/PB6(XTAL1)"
+      (pins Y1-2 U1-7 C5-1)
+    )
+    (net "/PB7(XTAL2)"
+      (pins Y1-1 U1-8 C6-1)
+    )
+    (net /DTR
+      (pins J1-6 C10-1)
+    )
+    (net "/PC6(RESET)"
+      (pins U1-29 R4-1 R3-2 J4-5 D1-2 C10-2 C9-1)
+    )
+    (net /RX
+      (pins U1-30 R6-1 J1-4)
+    )
+    (net /TX
+      (pins U1-31 R7-1 J1-5)
+    )
+    (net /SCL
+      (pins U4-6 U2-16 U1-28 R2-2 J3-3 J2-3)
+    )
+    (net /SDA
+      (pins U4-5 U2-15 U1-27 R1-2 J3-4 J2-4)
+    )
+    (net /SD_CS
+      (pins XS1-2 U1-14)
+    )
+    (net /MOSI
+      (pins XS1-3 U1-15 J4-4)
+    )
+    (net /MISO
+      (pins XS1-7 U1-16 J4-1)
+    )
+    (net "Net-(D2-Pad1)"
+      (pins R12-2 D2-1)
+    )
+    (net "Net-(L1-Pad2)"
+      (pins U7-4 L1-2)
+    )
+    (net "Net-(L1-Pad1)"
+      (pins U7-3 L1-1)
+    )
+    (net "Net-(Q1-Pad1)"
+      (pins Q1-8 Q1-1)
+    )
+    (net "Net-(R14-Pad1)"
+      (pins U6-2 R14-1)
+    )
+    (net "Net-(RT1-Pad1)"
+      (pins U7-1 RT1-1)
+    )
+    (net "Net-(C7-Pad1)"
+      (pins U1-20 C7-1)
+    )
+    (net BAT+
+      (pins U8-9 J7-1 C24-1 U7-8 U7-7 U6-5 R18-1 R16-1 R9-2 Q2-2 C23-1 C17-1)
+    )
+    (net "BAT-"
+      (pins J7-2 U5-6 Q1-3 Q1-2 C18-2)
+    )
+    (net "Net-(C15-Pad1)"
+      (pins Y2-1 U3-7 C15-1)
+    )
+    (net "Net-(C16-Pad1)"
+      (pins Y2-2 U3-8 C16-1)
+    )
+    (net "Net-(C18-Pad1)"
+      (pins U5-5 R9-1 C18-1)
+    )
+    (net "Net-(D3-Pad1)"
+      (pins R10-2 D3-1)
+    )
+    (net "Net-(R4-Pad2)"
+      (pins SW1-1 R4-2)
+    )
+    (net "Net-(R13-Pad1)"
+      (pins U5-2 R13-1)
+    )
+    (net "Net-(R18-Pad2)"
+      (pins U8-1 R22-1 R18-2)
+    )
+    (net /INT0
+      (pins U2-3 U1-32)
+    )
+    (net "Net-(C12-Pad2)"
+      (pins U3-4 R5-2 C12-2)
+    )
+    (net "Net-(C19-Pad1)"
+      (pins U6-8 U6-4 R11-1 R8-1 D3-2 D2-2 C19-1)
+    )
+    (net ADC
+      (pins R25-1 C27-1 U1-23 R21-2)
+    )
+    (net "Net-(C22-Pad2)"
+      (pins R20-1 C22-2)
+    )
+    (net "Net-(C22-Pad1)"
+      (pins R24-1 U7-9 R17-2 C22-1)
+    )
+    (net UD+
+      (pins J6-3 U3-5)
+    )
+    (net "UD-"
+      (pins J6-2 U3-6)
+    )
+    (net "Net-(Q1-Pad5)"
+      (pins U5-3 Q1-5)
+    )
+    (net "Net-(Q1-Pad4)"
+      (pins U5-1 Q1-4)
+    )
+    (net "Net-(Q2-Pad3)"
+      (pins R21-1 Q2-3)
+    )
+    (net "Net-(Q2-Pad1)"
+      (pins R16-2 Q3-3 Q2-1)
+    )
+    (net ENABLE
+      (pins U1-24 R19-1 Q3-1)
+    )
+    (net "Net-(R6-Pad2)"
+      (pins U3-2 R6-2)
+    )
+    (net "Net-(R7-Pad2)"
+      (pins U3-3 R7-2)
+    )
+    (net "Net-(R10-Pad1)"
+      (pins U6-7 R10-1)
+    )
+    (net "Net-(R11-Pad2)"
+      (pins U6-1 TH1-1 R15-1 R11-2)
+    )
+    (net "Net-(R12-Pad1)"
+      (pins U6-6 R12-1)
+    )
+    (net "Net-(C20-Pad1)"
+      (pins U8-6 L2-1 J8-1 C20-1)
+    )
+    (net "Net-(C25-Pad1)"
+      (pins U8-10 C25-1)
+    )
+    (net "Net-(C26-Pad1)"
+      (pins U8-2 C26-1)
+    )
+    (net "Net-(J6-Pad1)"
+      (pins J6-1 R8-2)
+    )
+    (net "Net-(L2-Pad2)"
+      (pins U8-7 L2-2)
+    )
+    (net "Net-(R20-Pad2)"
+      (pins U7-10 R20-2)
+    )
+    (net "Net-(R23-Pad1)"
+      (pins U8-5 R23-1)
+    )
+    (net "Net-(C11-Pad1)"
+      (pins U2-2 C11-1)
+    )
+    (net /SCK
+      (pins XS1-5 U1-17 J4-3)
+    )
+    (class kicad_default "" +3V3 /DTR /INT0 /MISO /MOSI "/PB6(XTAL1)" "/PB7(XTAL2)"
+      "/PC6(RESET)" /RX /SCK /SCL /SDA /SD_CS /TX ADC BAT+ "BAT-" ENABLE GND
+      "Net-(BT1-Pad1)" "Net-(C11-Pad1)" "Net-(C12-Pad2)" "Net-(C15-Pad1)"
+      "Net-(C16-Pad1)" "Net-(C18-Pad1)" "Net-(C19-Pad1)" "Net-(C20-Pad1)"
+      "Net-(C22-Pad1)" "Net-(C22-Pad2)" "Net-(C25-Pad1)" "Net-(C26-Pad1)"
+      "Net-(C7-Pad1)" "Net-(D2-Pad1)" "Net-(D3-Pad1)" "Net-(J6-Pad1)" "Net-(L1-Pad1)"
+      "Net-(L1-Pad2)" "Net-(L2-Pad2)" "Net-(Q1-Pad1)" "Net-(Q1-Pad4)" "Net-(Q1-Pad5)"
+      "Net-(Q2-Pad1)" "Net-(Q2-Pad3)" "Net-(R10-Pad1)" "Net-(R11-Pad2)" "Net-(R12-Pad1)"
+      "Net-(R13-Pad1)" "Net-(R14-Pad1)" "Net-(R18-Pad2)" "Net-(R20-Pad2)"
+      "Net-(R23-Pad1)" "Net-(R4-Pad2)" "Net-(R6-Pad2)" "Net-(R7-Pad2)" "Net-(RT1-Pad1)"
+      UD+ "UD-"
+      (circuit
+        (use_via Via[0-1]_800:400_um)
+      )
+      (rule
+        (width 279.4)
+        (clearance 200.1)
+      )
+    )
+    (class 3.3V
+      (circuit
+        (use_via Via[0-1]_800:400_um)
+      )
+      (rule
+        (width 350)
+        (clearance 250.1)
+      )
+    )
+    (class power
+      (circuit
+        (use_via Via[0-1]_800:400_um)
+      )
+      (rule
+        (width 600)
+        (clearance 300.1)
+      )
+    )
+  )
+  (wiring
+  )
+)

@@ -1,7 +1,7 @@
 (export (version D)
   (design
     (source C:\projekty\datalogger\hardware\datalogger.sch)
-    (date "2019-04-03 15:38:11")
+    (date "2019-04-04 10:03:41")
     (tool "Eeschema (6.0.0-rc1-dev-1491-g0a4812be0)")
     (sheet (number 1) (name /) (tstamps /)
       (title_block
