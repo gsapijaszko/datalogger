@@ -1234,7 +1234,7 @@ Wire Wire Line
 Wire Wire Line
 	4550 6000 4600 6000
 $Comp
-L kicad_libraries:uSD-push_push_SMD XS1
+L datalogger-rescue:uSD-push_push_SMD-kicad_libraries XS1
 U 1 1 5CA47DE3
 P 2000 3450
 F 0 "XS1" H 1670 3596 50  0000 R CNN
@@ -1254,4 +1254,8 @@ Wire Wire Line
 NoConn ~ 2400 3350
 NoConn ~ 2400 3450
 NoConn ~ 2400 3650
+Wire Wire Line
+	4500 6450 5200 6450
+Text Label 5200 6450 2    50   ~ 0
+DTR
 $EndSCHEMATC
