@@ -1,9 +1,9 @@
-(pcb C:\projekty\datalogger\hardware\datalogger.dsn
+(pcb /home/sapi/projekty/datalogger/hardware/datalogger.dsn
   (parser
     (string_quote ")
     (space_in_quoted_tokens on)
     (host_cad "KiCad's Pcbnew")
-    (host_version "(6.0.0-rc1-dev-1491-g0a4812be0)")
+    (host_version "5.1.0-unknown-203019d~94~ubuntu16.04.1")
   )
   (resolution um 10)
   (unit um)
@@ -33,19 +33,16 @@
     )
   )
   (placement
-    (component "kicad_libraries:1220 Battery Holder, SMD"
-      (place BT1 148590 -80772 front 0 (PN 3V))
-    )
-    (component kicad_libraries:Conn_uSDcard
-      (place XS1 155448 -101981 front 90 (PN "uSD-push_push_SMD"))
-    )
-    (component "Connector_USB:USB_Micro-B_Wuerth_629105150521"
-      (place J6 93853 -73279 front 270 (PN USB_B_Mini))
-    )
-    (component "Package_SO:MSOP-10-1EP_3x3mm_P0.5mm_EP1.68x1.88mm"
-      (place U8 104521 -63246 front 90 (PN LTC3105))
-    )
     (component Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder
+      (place R28 119126 -117094 front 180 (PN 470))
+      (place R27 119126 -114554 front 180 (PN 470))
+      (place R26 119126 -112014 front 180 (PN 470))
+    )
+    (component "kicad_libraries:LED_D5.0mm-4_RCGB"
+      (place D4 126746 -116840 front 90 (PN LED_CRGB))
+    )
+    (component Capacitor_SMD:C_1206_3216Metric_Pad1.42x1.75mm_HandSolder
+      (place C16 93645.9 -91849.4 front 180 (PN 22pF))
       (place R25 130603 -86412 front 90 (PN 100k))
       (place R24 134112 -73787 front 0 (PN 200k))
       (place R23 108331 -68072 front 0 (PN 40k2))
@@ -60,18 +57,29 @@
       (place R16 127301 -78157 front 0 (PN 10k))
       (place R14 109220 -87884 front 270 (PN 1k2))
       (place R11 113030 -87884 front 270 (PN 2k7))
-      (place R9 121412 -74168 front 180 (PN 100))
+      (place R9 123190 -72644 front 90 (PN 100))
       (place R3 151130 -58674 front 90 (PN 10k))
       (place C23 129540 -70993 front 270 (PN 4.7uF))
       (place C22 134112 -69977 front 0 (PN 1.5nF))
       (place C21 126873 -70993 front 270 (PN 4.7uF))
       (place C19 105664 -79375 front 270 (PN 10uF))
       (place C17 115824 -79375 front 270 (PN 10uF))
-      (place C16 93645.9 -91849.4 front 180 (PN 22pF))
       (place C15 100758 -91849.4 front 0 (PN 22pF))
       (place C10 144272 -70358 front 0 (PN 100nF))
-      (place C6 121158 -117729 front 0 (PN 22pF))
-      (place C5 114173 -117729 front 180 (PN 22pF))
+      (place C6 111252 -117856 front 0 (PN 22pF))
+      (place C5 104267 -117856 front 180 (PN 22pF))
+    )
+    (component "kicad_libraries:1220 Battery Holder, SMD"
+      (place BT1 148590 -80772 front 0 (PN 3V))
+    )
+    (component kicad_libraries:Conn_uSDcard
+      (place XS1 155448 -99187 front 90 (PN "uSD-push_push_SMD"))
+    )
+    (component "Connector_USB:USB_Micro-B_Wuerth_629105150521"
+      (place J6 93853 -73279 front 270 (PN USB_B_Mini))
+    )
+    (component "Package_SO:MSOP-10-1EP_3x3mm_P0.5mm_EP1.68x1.88mm"
+      (place U8 104521 -63246 front 90 (PN LTC3105))
     )
     (component Inductor_SMD:L_7.3x7.3_H4.5
       (place L2 105791 -54864 front 180 (PN 10uH))
@@ -92,14 +100,14 @@
       (place R10 109474 -74676 front 0 (PN 1k))
       (place R7 110744 -101600 front 270 (PN 1k))
       (place R6 108204 -101600 front 270 (PN 1k))
-      (place R5 101092 -114046 front 90 (PN 0R))
+      (place R5 97790 -112903 front 0 (PN 0R))
       (place R4 157354 -59690 front 0 (PN 330))
       (place R2 126746 -93726 front 90 (PN 4k7))
       (place R1 139700 -89662 front 90 (PN 4k7))
       (place C18 121920 -76835 front 180 (PN 100nF))
       (place C14 126746 -98552 front 270 (PN 100nF))
       (place C13 93980 -108721 front 270 (PN 100nF))
-      (place C12 104394 -114046 front 90 (PN 100nF))
+      (place C12 98806 -116332 front 90 (PN 100nF))
       (place C11 141986 -105156 front 90 (PN 1uF))
       (place C9 151130 -52832 front 90 (PN 100nF))
       (place C8 141986 -100330 front 90 (PN 100nF))
@@ -115,7 +123,7 @@
     )
     (component "Crystal:Crystal_HC49-U_Vertical"
       (place Y2 99614.9 -96167.4 front 180 (PN 12MHz))
-      (place Y1 120142 -113538 front 180 (PN 8MHz))
+      (place Y1 110236 -113665 front 180 (PN 8MHz))
     )
     (component "Package_SO:MSOP-10_3x3mm_P0.5mm"
       (place U7 129032 -63500 front 270 (PN LTC3440))
@@ -157,7 +165,7 @@
       (place Q1 118999 -90297 front 180 (PN FS8205A))
     )
     (component "Connector_IDC:IDC-Header_2x03_P2.54mm_Vertical"
-      (place J4 135382 -113538 front 270 (PN "AVR-ISP-6"))
+      (place J4 141478 -113411 front 270 (PN "AVR-ISP-6"))
     )
     (component "Connector_Molex:Molex_KK-254_AE-6410-04A_1x04_P2.54mm_Vertical"
       (place J3 138684 -61976 front 0 (PN BME280))
@@ -183,6 +191,54 @@
     )
   )
   (library
+    (image Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder
+      (outline (path signal 100  -1600 -800  -1600 800))
+      (outline (path signal 100  -1600 800  1600 800))
+      (outline (path signal 100  1600 800  1600 -800))
+      (outline (path signal 100  1600 -800  -1600 -800))
+      (outline (path signal 120  -602.064 910  602.064 910))
+      (outline (path signal 120  -602.064 -910  602.064 -910))
+      (outline (path signal 50  -2450 -1120  -2450 1120))
+      (outline (path signal 50  -2450 1120  2450 1120))
+      (outline (path signal 50  2450 1120  2450 -1120))
+      (outline (path signal 50  2450 -1120  -2450 -1120))
+      (pin RoundRect[T]Pad_1425x1750_250.951_um 1 -1487.5 0)
+      (pin RoundRect[T]Pad_1425x1750_250.951_um 2 1487.5 0)
+    )
+    (image "kicad_libraries:LED_D5.0mm-4_RCGB"
+      (outline (path signal 100  4405 0  4326.46 -621.725  4095.77 -1204.38  3727.42 -1711.37
+            3244.57 -2110.82  2677.54 -2377.64  2061.98 -2495.07  1436.55 -2455.72
+            840.552 -2262.07  311.44 -1926.28  -117.542 -1469.46  -419.441 -920.311
+            -575.287 -313.333  -575.287 313.333  -419.441 920.311  -117.542 1469.46
+            311.44 1926.28  840.552 2262.07  1436.55 2455.72  2061.98 2495.07
+            2677.54 2377.64  3244.57 2110.82  3727.42 1711.37  4095.77 1204.38
+            4326.46 621.725  4405 0))
+      (outline (path signal 100  -595 1469.69  -595 -1469.69))
+      (outline (path signal 120  -655 1545  -655 1080))
+      (outline (path signal 120  -655 -1080  -655 -1545))
+      (outline (path signal 50  -1350 3250  -1350 -3250))
+      (outline (path signal 50  -1350 -3250  5150 -3250))
+      (outline (path signal 50  5150 -3250  5150 3250))
+      (outline (path signal 50  5150 3250  -1350 3250))
+      (pin Oval[A]Pad_1070x1800_um 2 0 0)
+      (pin Rect[A]Pad_1070x1800_um 1 1270 0)
+      (pin Oval[A]Pad_1070x1800_um 3 2540 0)
+      (pin Oval[A]Pad_1070x1800_um 4 3810 0)
+    )
+    (image Capacitor_SMD:C_1206_3216Metric_Pad1.42x1.75mm_HandSolder
+      (outline (path signal 50  2450 -1120  -2450 -1120))
+      (outline (path signal 50  2450 1120  2450 -1120))
+      (outline (path signal 50  -2450 1120  2450 1120))
+      (outline (path signal 50  -2450 -1120  -2450 1120))
+      (outline (path signal 120  -602.064 -910  602.064 -910))
+      (outline (path signal 120  -602.064 910  602.064 910))
+      (outline (path signal 100  1600 -800  -1600 -800))
+      (outline (path signal 100  1600 800  1600 -800))
+      (outline (path signal 100  -1600 800  1600 800))
+      (outline (path signal 100  -1600 -800  -1600 800))
+      (pin RoundRect[T]Pad_1425x1750_250.951_um 2 1487.5 0)
+      (pin RoundRect[T]Pad_1425x1750_250.951_um 1 -1487.5 0)
+    )
     (image "kicad_libraries:1220 Battery Holder, SMD"
       (outline (path signal 120  5715 1651  5715 -1651))
       (outline (path signal 120  -5715 -1651  -7429.5 -1651))
@@ -362,20 +418,6 @@
       (pin Rect[T]Pad_890x305_um 3 -2105 0)
       (pin Rect[T]Pad_890x305_um 2 -2105 500)
       (pin Rect[T]Pad_890x305_um 1 -2105 1000)
-    )
-    (image Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder
-      (outline (path signal 50  2450 -1120  -2450 -1120))
-      (outline (path signal 50  2450 1120  2450 -1120))
-      (outline (path signal 50  -2450 1120  2450 1120))
-      (outline (path signal 50  -2450 -1120  -2450 1120))
-      (outline (path signal 120  -602.064 -910  602.064 -910))
-      (outline (path signal 120  -602.064 910  602.064 910))
-      (outline (path signal 100  1600 -800  -1600 -800))
-      (outline (path signal 100  1600 800  1600 -800))
-      (outline (path signal 100  -1600 800  1600 800))
-      (outline (path signal 100  -1600 -800  -1600 800))
-      (pin RoundRect[T]Pad_1425x1750_250.951_um 2 1487.5 0)
-      (pin RoundRect[T]Pad_1425x1750_250.951_um 1 -1487.5 0)
     )
     (image Inductor_SMD:L_7.3x7.3_H4.5
       (outline (path signal 100  -3650 3650  3650 3650))
@@ -795,18 +837,18 @@
       (pin Rect[T]Pad_1600x550_um 1 -4250 2800)
     )
     (image Resistor_SMD:R_1218_3246Metric_Pad1.22x4.75mm_HandSolder
-      (outline (path signal 50  2420 -2620  -2420 -2620))
-      (outline (path signal 50  2420 2620  2420 -2620))
-      (outline (path signal 50  -2420 2620  2420 2620))
-      (outline (path signal 50  -2420 -2620  -2420 2620))
-      (outline (path signal 120  -777.064 -2410  777.064 -2410))
-      (outline (path signal 120  -777.064 2410  777.064 2410))
-      (outline (path signal 100  1600 -2300  -1600 -2300))
-      (outline (path signal 100  1600 2300  1600 -2300))
-      (outline (path signal 100  -1600 2300  1600 2300))
       (outline (path signal 100  -1600 -2300  -1600 2300))
-      (pin RoundRect[T]Pad_1225x4750_250.951_um 2 1562.5 0)
+      (outline (path signal 100  -1600 2300  1600 2300))
+      (outline (path signal 100  1600 2300  1600 -2300))
+      (outline (path signal 100  1600 -2300  -1600 -2300))
+      (outline (path signal 120  -777.064 2410  777.064 2410))
+      (outline (path signal 120  -777.064 -2410  777.064 -2410))
+      (outline (path signal 50  -2420 -2620  -2420 2620))
+      (outline (path signal 50  -2420 2620  2420 2620))
+      (outline (path signal 50  2420 2620  2420 -2620))
+      (outline (path signal 50  2420 -2620  -2420 -2620))
       (pin RoundRect[T]Pad_1225x4750_250.951_um 1 -1562.5 0)
+      (pin RoundRect[T]Pad_1225x4750_250.951_um 2 1562.5 0)
     )
     (image Button_Switch_THT:SW_Tactile_SKHH_Angled
       (outline (path signal 120  -1620 -3820  -1620 -4120))
@@ -1198,6 +1240,11 @@
       (shape (circle B.Cu 800))
       (attach off)
     )
+    (padstack Oval[A]Pad_1070x1800_um
+      (shape (path F.Cu 1070  0 -365  0 365))
+      (shape (path B.Cu 1070  0 -365  0 365))
+      (attach off)
+    )
     (padstack Oval[A]Pad_1150x1800_um
       (shape (path F.Cu 1150  0 -325  0 325))
       (shape (path B.Cu 1150  0 -325  0 325))
@@ -1425,6 +1472,11 @@
       (shape (rect F.Cu -450 -400 450 400))
       (attach off)
     )
+    (padstack Rect[A]Pad_1070x1800_um
+      (shape (rect F.Cu -535 -900 535 900))
+      (shape (rect B.Cu -535 -900 535 900))
+      (attach off)
+    )
     (padstack Rect[T]Pad_1200x2200_um
       (shape (rect F.Cu -600 -1100 600 1100))
       (attach off)
@@ -1501,16 +1553,16 @@
   )
   (network
     (net GND
-      (pins BT1-2 XS1-6 XS1-6@1 XS1-6@2 XS1-6@3 XS1-6@4 J6-6 J6-6@1 J6-6@2 J6-6@3
-        J6-5 U8-11 U8-3 R25-2 R24-2 R23-2 J8-2 C27-2 C26-2 C25-2 C24-2 C20-2 U7-5
-        U6-3 U6-9@1 U6-9@2 U6-9@3 U6-9@4 U6-9@5 U6-9@6 U6-9@7 U4-7 U4-4 U4-3 U4-2
-        U4-1 U3-1 U2-13 U2-12 U2-11 U2-10 U2-9 U2-8 U2-7 U2-6 U2-5 U1-21 U1-5 U1-3
-        TH1-2 SW1-2 RT1-2 R22-2 R19-2 R15-2 R14-2 R13-2 Q3-2 Q1-7 Q1-6 J4-6 J3-2 J2-2
-        J1-2 J1-1 H4-1 H4-1@1 H4-1@2 H4-1@3 H4-1@4 H4-1@5 H4-1@6 H4-1@7 H4-1@8 H3-1
-        H3-1@1 H3-1@2 H3-1@3 H3-1@4 H3-1@5 H3-1@6 H3-1@7 H3-1@8 H2-1 H2-1@1 H2-1@2
+      (pins D4-1 C16-2 BT1-2 XS1-6 XS1-6@1 XS1-6@2 XS1-6@3 XS1-6@4 J6-6 J6-6@1 J6-6@2
+        J6-6@3 J6-5 U8-11 U8-3 R25-2 R24-2 R23-2 J8-2 C27-2 C26-2 C25-2 C24-2 C20-2
+        U7-5 U6-3 U6-9@1 U6-9@2 U6-9@3 U6-9@4 U6-9@5 U6-9@6 U6-9@7 U4-7 U4-4 U4-3
+        U4-2 U4-1 U3-1 U2-13 U2-12 U2-11 U2-10 U2-9 U2-8 U2-7 U2-6 U2-5 U1-21 U1-5
+        U1-3 TH1-2 SW1-2 RT1-2 R22-2 R19-2 R15-2 R14-2 R13-2 Q3-2 Q1-7 Q1-6 J4-6 J3-2
+        J2-2 J1-2 J1-1 H4-1 H4-1@1 H4-1@2 H4-1@3 H4-1@4 H4-1@5 H4-1@6 H4-1@7 H4-1@8
+        H3-1 H3-1@1 H3-1@2 H3-1@3 H3-1@4 H3-1@5 H3-1@6 H3-1@7 H3-1@8 H2-1 H2-1@1 H2-1@2
         H2-1@3 H2-1@4 H2-1@5 H2-1@6 H2-1@7 H2-1@8 H1-1 H1-1@1 H1-1@2 H1-1@3 H1-1@4
-        H1-1@5 H1-1@6 H1-1@7 H1-1@8 C23-2 C21-2 C19-2 C17-2 C16-2 C15-2 C14-2 C13-1
-        C12-1 C11-2 C9-2 C8-2 C7-2 C6-2 C5-2 C4-2 C3-1 C2-1 C1-2)
+        H1-1@5 H1-1@6 H1-1@7 H1-1@8 C23-2 C21-2 C19-2 C17-2 C15-2 C14-2 C13-1 C12-1
+        C11-2 C9-2 C8-2 C7-2 C6-2 C5-2 C4-2 C3-1 C2-1 C1-2)
     )
     (net "Net-(BT1-Pad1)"
       (pins BT1-1 U2-14)
@@ -1526,7 +1578,7 @@
       (pins Y1-1 U1-8 C6-1)
     )
     (net /DTR
-      (pins J1-6 C10-1)
+      (pins U3-13 J1-6 C10-1)
     )
     (net "/PC6(RESET)"
       (pins U1-29 R4-1 R3-2 J4-5 D1-2 C10-2 C9-1)
@@ -1583,7 +1635,7 @@
       (pins Y2-1 U3-7 C15-1)
     )
     (net "Net-(C16-Pad1)"
-      (pins Y2-2 U3-8 C16-1)
+      (pins C16-1 Y2-2 U3-8)
     )
     (net "Net-(C18-Pad1)"
       (pins U5-5 R9-1 C18-1)
@@ -1675,23 +1727,48 @@
     (net "Net-(R23-Pad1)"
       (pins U8-5 R23-1)
     )
-    (net "Net-(C11-Pad1)"
-      (pins U2-2 C11-1)
-    )
     (net /SCK
       (pins XS1-5 U1-17 J4-3)
     )
-    (class kicad_default "" +3V3 /DTR /INT0 /MISO /MOSI "/PB6(XTAL1)" "/PB7(XTAL2)"
-      "/PC6(RESET)" /RX /SCK /SCL /SDA /SD_CS /TX ADC BAT+ "BAT-" ENABLE GND
-      "Net-(BT1-Pad1)" "Net-(C11-Pad1)" "Net-(C12-Pad2)" "Net-(C15-Pad1)"
-      "Net-(C16-Pad1)" "Net-(C18-Pad1)" "Net-(C19-Pad1)" "Net-(C20-Pad1)"
-      "Net-(C22-Pad1)" "Net-(C22-Pad2)" "Net-(C25-Pad1)" "Net-(C26-Pad1)"
-      "Net-(C7-Pad1)" "Net-(D2-Pad1)" "Net-(D3-Pad1)" "Net-(J6-Pad1)" "Net-(L1-Pad1)"
-      "Net-(L1-Pad2)" "Net-(L2-Pad2)" "Net-(Q1-Pad1)" "Net-(Q1-Pad4)" "Net-(Q1-Pad5)"
-      "Net-(Q2-Pad1)" "Net-(Q2-Pad3)" "Net-(R10-Pad1)" "Net-(R11-Pad2)" "Net-(R12-Pad1)"
-      "Net-(R13-Pad1)" "Net-(R14-Pad1)" "Net-(R18-Pad2)" "Net-(R20-Pad2)"
-      "Net-(R23-Pad1)" "Net-(R4-Pad2)" "Net-(R6-Pad2)" "Net-(R7-Pad2)" "Net-(RT1-Pad1)"
-      UD+ "UD-"
+    (net "/RTC-VCC"
+      (pins U2-2 U1-9 C11-1)
+    )
+    (net "/LED-B"
+      (pins R26-2 U1-12)
+    )
+    (net "/LED-G"
+      (pins R27-2 U1-11)
+    )
+    (net "/LED-R"
+      (pins R28-2 U1-10)
+    )
+    (net "Net-(D4-Pad2)"
+      (pins R28-1 D4-2)
+    )
+    (net "Net-(D4-Pad3)"
+      (pins R27-1 D4-3)
+    )
+    (net "Net-(D4-Pad4)"
+      (pins R26-1 D4-4)
+    )
+    (class kicad_default "" +3V3 /DTR /INT0 "/LED-B" "/LED-G" "/LED-R" /MISO
+      /MOSI "/PB6(XTAL1)" "/PB7(XTAL2)" "/PC6(RESET)" "/RTC-VCC" /RX /SCK
+      /SCL /SDA /SD_CS /TX ADC BAT+ "BAT-" ENABLE GND "Net-(BT1-Pad1)" "Net-(C12-Pad2)"
+      "Net-(C15-Pad1)" "Net-(C16-Pad1)" "Net-(C18-Pad1)" "Net-(C19-Pad1)"
+      "Net-(C20-Pad1)" "Net-(C22-Pad1)" "Net-(C22-Pad2)" "Net-(C25-Pad1)"
+      "Net-(C26-Pad1)" "Net-(C7-Pad1)" "Net-(D2-Pad1)" "Net-(D3-Pad1)" "Net-(D4-Pad2)"
+      "Net-(D4-Pad3)" "Net-(D4-Pad4)" "Net-(D?1555149278-Pad2)" "Net-(D?1555149278-Pad3)"
+      "Net-(D?1555149278-Pad4)" "Net-(J2-Pad5)" "Net-(J6-Pad1)" "Net-(J6-Pad4)"
+      "Net-(L1-Pad1)" "Net-(L1-Pad2)" "Net-(L2-Pad2)" "Net-(Q1-Pad1)" "Net-(Q1-Pad4)"
+      "Net-(Q1-Pad5)" "Net-(Q2-Pad1)" "Net-(Q2-Pad3)" "Net-(R10-Pad1)" "Net-(R11-Pad2)"
+      "Net-(R12-Pad1)" "Net-(R13-Pad1)" "Net-(R14-Pad1)" "Net-(R18-Pad2)"
+      "Net-(R20-Pad2)" "Net-(R23-Pad1)" "Net-(R4-Pad2)" "Net-(R6-Pad2)" "Net-(R7-Pad2)"
+      "Net-(RT1-Pad1)" "Net-(U1-Pad1)" "Net-(U1-Pad13)" "Net-(U1-Pad19)" "Net-(U1-Pad2)"
+      "Net-(U1-Pad22)" "Net-(U1-Pad25)" "Net-(U1-Pad26)" "Net-(U2-Pad1)" "Net-(U2-Pad4)"
+      "Net-(U3-Pad10)" "Net-(U3-Pad11)" "Net-(U3-Pad12)" "Net-(U3-Pad14)"
+      "Net-(U3-Pad15)" "Net-(U3-Pad9)" "Net-(U5-Pad4)" "Net-(U7-Pad2)" "Net-(U8-Pad4)"
+      "Net-(U8-Pad8)" "Net-(XS1-Pad1)" "Net-(XS1-Pad8)" "Net-(XS1-Pad9)" UD+
+      "UD-"
       (circuit
         (use_via Via[0-1]_800:400_um)
       )

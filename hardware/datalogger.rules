@@ -11,7 +11,7 @@
     (via_costs 50)
     (plane_via_costs 5)
     (start_ripup_costs 100)
-    (start_pass_no 5365)
+    (start_pass_no 11168)
     (layer_rule F.Cu
       (active on)
       (preferred_direction horizontal)
@@ -90,8 +90,8 @@
     "Net-(C16-Pad1)" "Net-(C18-Pad1)" "Net-(D3-Pad1)" "Net-(R4-Pad2)" "Net-(R13-Pad1)" "Net-(R18-Pad2)" /INT0 "Net-(C12-Pad2)"
     "Net-(C19-Pad1)" ADC "Net-(C22-Pad2)" "Net-(C22-Pad1)" UD+ "UD-" "Net-(Q1-Pad5)" "Net-(Q1-Pad4)"
     "Net-(Q2-Pad3)" "Net-(Q2-Pad1)" ENABLE "Net-(R6-Pad2)" "Net-(R7-Pad2)" "Net-(R10-Pad1)" "Net-(R11-Pad2)" "Net-(R12-Pad1)"
-    "Net-(C20-Pad1)" "Net-(C25-Pad1)" "Net-(C26-Pad1)" "Net-(J6-Pad1)" "Net-(L2-Pad2)" "Net-(R20-Pad2)" "Net-(R23-Pad1)" "Net-(C11-Pad1)"
-    /SCK
+    "Net-(C20-Pad1)" "Net-(C25-Pad1)" "Net-(C26-Pad1)" "Net-(J6-Pad1)" "Net-(L2-Pad2)" "Net-(R20-Pad2)" "Net-(R23-Pad1)" /SCK
+    "/RTC-VCC" "/LED-B" "/LED-G" "/LED-R" "Net-(D4-Pad2)" "Net-(D4-Pad3)" "Net-(D4-Pad4)"
     (clearance_class "kicad_default")
     (via_rule kicad_default)
     (rule

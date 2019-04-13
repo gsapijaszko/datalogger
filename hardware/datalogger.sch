@@ -1,4 +1,4 @@
-EESchema Schematic File Version 4
+EESchema Schematic File Version 5
 LIBS:datalogger-cache
 EELAYER 29 0
 EELAYER END
@@ -1258,4 +1258,91 @@ Wire Wire Line
 	4500 6450 5200 6450
 Text Label 5200 6450 2    50   ~ 0
 DTR
+$Comp
+L Device:LED_CRGB D4
+U 1 1 5CB1B1DE
+P 8250 5400
+F 0 "D4" H 8250 4933 50  0000 C CNN
+F 1 "LED_CRGB" H 8250 5024 50  0000 C CNN
+F 2 "kicad_libraries:LED_D5.0mm-4_RCGB" H 8250 5350 50  0001 C CNN
+F 3 "~" H 8250 5350 50  0001 C CNN
+	1    8250 5400
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R R26
+U 1 1 5CB1CE72
+P 7900 5200
+F 0 "R26" V 7800 5050 50  0000 C CNN
+F 1 "470" V 7800 5200 50  0000 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 7830 5200 50  0001 C CNN
+F 3 "~" H 7900 5200 50  0001 C CNN
+	1    7900 5200
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R27
+U 1 1 5CB23A39
+P 7900 5400
+F 0 "R27" V 7800 5250 50  0000 C CNN
+F 1 "470" V 7800 5400 50  0000 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 7830 5400 50  0001 C CNN
+F 3 "~" H 7900 5400 50  0001 C CNN
+	1    7900 5400
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R28
+U 1 1 5CB24F96
+P 7900 5600
+F 0 "R28" V 7800 5450 50  0000 C CNN
+F 1 "470" V 7800 5600 50  0000 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 7830 5600 50  0001 C CNN
+F 3 "~" H 7900 5600 50  0001 C CNN
+	1    7900 5600
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR0101
+U 1 1 5CB27694
+P 8600 5400
+F 0 "#PWR0101" H 8600 5150 50  0001 C CNN
+F 1 "GND" H 8605 5227 50  0000 C CNN
+F 2 "" H 8600 5400 50  0001 C CNN
+F 3 "" H 8600 5400 50  0001 C CNN
+	1    8600 5400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8450 5400 8600 5400
+Wire Wire Line
+	7750 5200 7350 5200
+Wire Wire Line
+	7750 5400 7350 5400
+Wire Wire Line
+	7750 5600 7350 5600
+Text Label 7350 5200 0    50   ~ 0
+LED-B
+Text Label 7350 5400 0    50   ~ 0
+LED-G
+Text Label 7350 5600 0    50   ~ 0
+LED-R
+Wire Wire Line
+	5850 4100 6500 4100
+Wire Wire Line
+	5850 4200 6500 4200
+Wire Wire Line
+	5850 4000 6500 4000
+Text Label 6500 4100 2    50   ~ 0
+LED-R
+Text Label 6500 4200 2    50   ~ 0
+LED-G
+Wire Wire Line
+	5850 1800 6500 1800
+Text Label 6500 1800 2    50   ~ 0
+LED-B
+Text Label 6500 4000 2    50   ~ 0
+RTC-VCC
+Text Label 1650 4400 1    50   ~ 0
+RTC-VCC
 $EndSCHEMATC
