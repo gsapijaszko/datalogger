@@ -1,4 +1,4 @@
-15935395565370436
+15939784277844436
 Battery
 BatteryHolder_Bulgin_BX0036_1xC
 Bulgin{space}Battery{space}Holder,{space}BX0036,{space}Battery{space}Type{space}C{space}(https://www.bulgin.com/products/pub/media/bulgin/data/Battery_holders.pdf)
@@ -39681,6 +39681,13 @@ https://www.molex.com/pdm_docs/sd/1050570001_sd.pdf
 USB{space}A{space}Vertical
 0
 7
+5
+Connector_USB
+USB_A_Stewart_SS-52100-001_Horizontal
+USB{space}A{space}connector{space}https://belfuse.com/resources/drawings/stewartconnector/dr-stw-ss-52100-001.pdf
+USB_A{space}Female{space}Connector{space}receptacle
+0
+6
 5
 Connector_USB
 USB_A_Wuerth_61400826021_Horizontal_Stacked
