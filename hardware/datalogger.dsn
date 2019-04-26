@@ -1,9 +1,9 @@
-(pcb /home/sapi/projekty/datalogger/hardware/datalogger.dsn
+(pcb C:\projekty\datalogger\hardware\datalogger.dsn
   (parser
     (string_quote ")
     (space_in_quoted_tokens on)
     (host_cad "KiCad's Pcbnew")
-    (host_version "5.1.0-unknown-203019d~94~ubuntu16.04.1")
+    (host_version "(6.0.0-rc1-dev-1491-g0a4812be0)")
   )
   (resolution um 10)
   (unit um)
@@ -24,7 +24,7 @@
       (path pcb 0  160000 -120000  90000 -120000  90000 -50000  160000 -50000
             160000 -120000)
     )
-    (via "Via[0-1]_800:400_um")
+    (via "Via[0-1]_800:400_um" "Via[0-1]_1000:500_um")
     (rule
       (width 279.4)
       (clearance 200.1)
@@ -66,8 +66,8 @@
       (place C17 115824 -79375 front 270 (PN 10uF))
       (place C15 100758 -91849.4 front 0 (PN 22pF))
       (place C10 144272 -70358 front 0 (PN 100nF))
-      (place C6 111252 -117856 front 0 (PN 22pF))
-      (place C5 104267 -117856 front 180 (PN 22pF))
+      (place C6 113030 -117221 front 0 (PN 22pF))
+      (place C5 106045 -117221 front 180 (PN 22pF))
     )
     (component "kicad_libraries:1220 Battery Holder, SMD"
       (place BT1 148590 -80772 front 0 (PN 3V))
@@ -98,24 +98,24 @@
       (place R13 121158 -86614 front 0 (PN 1k))
       (place R12 114808 -74676 front 0 (PN 1k))
       (place R10 109474 -74676 front 0 (PN 1k))
-      (place R7 110744 -101600 front 270 (PN 1k))
-      (place R6 108204 -101600 front 270 (PN 1k))
+      (place R7 108712 -101600 front 270 (PN 1k))
+      (place R6 106172 -101600 front 270 (PN 1k))
       (place R5 97790 -112903 front 0 (PN 0R))
       (place R4 157354 -59690 front 0 (PN 330))
-      (place R2 126746 -93726 front 90 (PN 4k7))
-      (place R1 139700 -89662 front 90 (PN 4k7))
+      (place R2 142621 -89535 front 90 (PN 4k7))
+      (place R1 139319 -89535 front 90 (PN 4k7))
       (place C18 121920 -76835 front 180 (PN 100nF))
-      (place C14 126746 -98552 front 270 (PN 100nF))
-      (place C13 93980 -108721 front 270 (PN 100nF))
+      (place C14 126873 -95758 front 270 (PN 100nF))
+      (place C13 93345 -109728 front 0 (PN 100nF))
       (place C12 98806 -116332 front 90 (PN 100nF))
       (place C11 141986 -105156 front 90 (PN 1uF))
       (place C9 151130 -52832 front 90 (PN 100nF))
-      (place C8 141986 -100330 front 90 (PN 100nF))
-      (place C7 125298 -102768 front 90 (PN 100nF))
-      (place C4 127584 -106832 front 270 (PN 10uF))
-      (place C3 125298 -106832 front 90 (PN 100nF))
-      (place C2 110490 -106934 front 90 (PN 100nF))
-      (place C1 108458 -106934 front 270 (PN 10uF))
+      (place C8 142240 -99314 front 90 (PN 100nF))
+      (place C7 123266 -102768 front 90 (PN 100nF))
+      (place C4 125552 -106832 front 270 (PN 10uF))
+      (place C3 123266 -106832 front 90 (PN 100nF))
+      (place C2 107874 -108001 front 0 (PN 100nF))
+      (place C1 107874 -105969 front 180 (PN 10uF))
     )
     (component Capacitor_SMD:C_0805_2012Metric
       (place C26 102997 -68072 front 0 (PN 4.7uF))
@@ -123,7 +123,7 @@
     )
     (component "Crystal:Crystal_HC49-U_Vertical"
       (place Y2 99614.9 -96167.4 front 180 (PN 12MHz))
-      (place Y1 110236 -113665 front 180 (PN 8MHz))
+      (place Y1 112014 -113030 front 180 (PN 8MHz))
     )
     (component "Package_SO:MSOP-10_3x3mm_P0.5mm"
       (place U7 129032 -63500 front 270 (PN LTC3440))
@@ -144,7 +144,7 @@
       (place U2 134747 -102997 front 180 (PN DS3231M))
     )
     (component "Package_QFP:TQFP-32_7x7mm_P0.8mm"
-      (place U1 117932 -103784 front 0 (PN "ATmega328P-AU"))
+      (place U1 115900 -103784 front 0 (PN "ATmega328P-AU"))
     )
     (component Resistor_SMD:R_1218_3246Metric_Pad1.22x4.75mm_HandSolder
       (place TH1 110998 -90297 back 0 (PN "10k (25ᵒ)"))
@@ -183,8 +183,8 @@
       (place H1 94000 -54000 front 0 (PN H))
     )
     (component LED_SMD:LED_1210_3225Metric_Pad1.42x2.65mm_HandSolder
-      (place D3 116332 -69596 front 90 (PN red))
-      (place D2 119888 -69596 front 90 (PN green))
+      (place D3 115316 -69596 front 90 (PN red))
+      (place D2 118872 -69596 front 90 (PN green))
     )
     (component "Diode_THT:D_DO-34_SOD68_P7.62mm_Horizontal"
       (place D1 138684 -67818 front 0 (PN 1N4148))
@@ -1550,6 +1550,11 @@
       (shape (circle B.Cu 800))
       (attach off)
     )
+    (padstack "Via[0-1]_1000:500_um"
+      (shape (circle F.Cu 1000))
+      (shape (circle B.Cu 1000))
+      (attach off)
+    )
   )
   (network
     (net GND
@@ -1752,22 +1757,16 @@
       (pins R26-1 D4-4)
     )
     (class kicad_default "" +3V3 /DTR /INT0 "/LED-B" "/LED-G" "/LED-R" /MISO
-      /MOSI "/PB6(XTAL1)" "/PB7(XTAL2)" "/PC6(RESET)" "/RTC-VCC" /RX /SCK
-      /SCL /SDA /SD_CS /TX ADC BAT+ "BAT-" ENABLE GND "Net-(BT1-Pad1)" "Net-(C12-Pad2)"
-      "Net-(C15-Pad1)" "Net-(C16-Pad1)" "Net-(C18-Pad1)" "Net-(C19-Pad1)"
-      "Net-(C20-Pad1)" "Net-(C22-Pad1)" "Net-(C22-Pad2)" "Net-(C25-Pad1)"
-      "Net-(C26-Pad1)" "Net-(C7-Pad1)" "Net-(D2-Pad1)" "Net-(D3-Pad1)" "Net-(D4-Pad2)"
-      "Net-(D4-Pad3)" "Net-(D4-Pad4)" "Net-(D?1555149278-Pad2)" "Net-(D?1555149278-Pad3)"
-      "Net-(D?1555149278-Pad4)" "Net-(J2-Pad5)" "Net-(J6-Pad1)" "Net-(J6-Pad4)"
-      "Net-(L1-Pad1)" "Net-(L1-Pad2)" "Net-(L2-Pad2)" "Net-(Q1-Pad1)" "Net-(Q1-Pad4)"
-      "Net-(Q1-Pad5)" "Net-(Q2-Pad1)" "Net-(Q2-Pad3)" "Net-(R10-Pad1)" "Net-(R11-Pad2)"
-      "Net-(R12-Pad1)" "Net-(R13-Pad1)" "Net-(R14-Pad1)" "Net-(R18-Pad2)"
-      "Net-(R20-Pad2)" "Net-(R23-Pad1)" "Net-(R4-Pad2)" "Net-(R6-Pad2)" "Net-(R7-Pad2)"
-      "Net-(RT1-Pad1)" "Net-(U1-Pad1)" "Net-(U1-Pad13)" "Net-(U1-Pad19)" "Net-(U1-Pad2)"
-      "Net-(U1-Pad22)" "Net-(U1-Pad25)" "Net-(U1-Pad26)" "Net-(U2-Pad1)" "Net-(U2-Pad4)"
-      "Net-(U3-Pad10)" "Net-(U3-Pad11)" "Net-(U3-Pad12)" "Net-(U3-Pad14)"
-      "Net-(U3-Pad15)" "Net-(U3-Pad9)" "Net-(U5-Pad4)" "Net-(U7-Pad2)" "Net-(U8-Pad4)"
-      "Net-(U8-Pad8)" "Net-(XS1-Pad1)" "Net-(XS1-Pad8)" "Net-(XS1-Pad9)" UD+
+      /MOSI "/PC6(RESET)" "/RTC-VCC" /RX /SCK /SCL /SDA /SD_CS /TX ADC BAT+
+      "BAT-" ENABLE GND "Net-(BT1-Pad1)" "Net-(C12-Pad2)" "Net-(C15-Pad1)"
+      "Net-(C16-Pad1)" "Net-(C18-Pad1)" "Net-(C19-Pad1)" "Net-(C20-Pad1)"
+      "Net-(C22-Pad1)" "Net-(C22-Pad2)" "Net-(C25-Pad1)" "Net-(C26-Pad1)"
+      "Net-(C7-Pad1)" "Net-(D2-Pad1)" "Net-(D3-Pad1)" "Net-(D4-Pad2)" "Net-(D4-Pad3)"
+      "Net-(D4-Pad4)" "Net-(J6-Pad1)" "Net-(L1-Pad1)" "Net-(L1-Pad2)" "Net-(L2-Pad2)"
+      "Net-(Q1-Pad1)" "Net-(Q1-Pad4)" "Net-(Q1-Pad5)" "Net-(Q2-Pad1)" "Net-(Q2-Pad3)"
+      "Net-(R10-Pad1)" "Net-(R11-Pad2)" "Net-(R12-Pad1)" "Net-(R13-Pad1)"
+      "Net-(R14-Pad1)" "Net-(R18-Pad2)" "Net-(R20-Pad2)" "Net-(R23-Pad1)"
+      "Net-(R4-Pad2)" "Net-(R6-Pad2)" "Net-(R7-Pad2)" "Net-(RT1-Pad1)" UD+
       "UD-"
       (circuit
         (use_via Via[0-1]_800:400_um)
@@ -1777,9 +1776,9 @@
         (clearance 200.1)
       )
     )
-    (class 3.3V
+    (class 3.3V "/PB6(XTAL1)" "/PB7(XTAL2)"
       (circuit
-        (use_via Via[0-1]_800:400_um)
+        (use_via Via[0-1]_1000:500_um)
       )
       (rule
         (width 350)
@@ -1788,7 +1787,7 @@
     )
     (class power
       (circuit
-        (use_via Via[0-1]_800:400_um)
+        (use_via Via[0-1]_1000:500_um)
       )
       (rule
         (width 600)
