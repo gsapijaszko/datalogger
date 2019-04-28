@@ -1,4 +1,4 @@
-EESchema Schematic File Version 5
+EESchema Schematic File Version 4
 LIBS:datalogger-cache
 EELAYER 29 0
 EELAYER END
@@ -308,9 +308,11 @@ F 3 "~" H 4050 2600 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L kicad_libraries:TP4056 U6
+L datalogger-rescue:TP4056-kicad_libraries U6
 U 1 1 5CA6858F
 P 3550 1750
+AR Path="/5CA6858F" Ref="U6"  Part="1" 
+AR Path="/5C346344/5CA6858F" Ref="U6"  Part="1" 
 F 0 "U6" H 3550 2400 60  0000 C CNN
 F 1 "TP4056" H 3550 2300 60  0000 C CNN
 F 2 "Package_SO:HSOP-8-1EP_3.9x4.9mm_P1.27mm_EP2.41x3.1mm_ThermalVias" H 3550 1750 60  0001 C CNN

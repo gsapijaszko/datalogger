@@ -1,4 +1,4 @@
-EESchema Schematic File Version 4
+EESchema Schematic File Version 5
 LIBS:datalogger-cache
 EELAYER 29 0
 EELAYER END
@@ -1049,4 +1049,6 @@ Wire Notes Line
 	4300 3450 4300 6150
 Text Notes 2850 3600 2    50   ~ 0
 PHOTOVOLTAIC CHARGER
+Text Notes 1800 6350 0    50   ~ 0
+LT3105 w obudowie 12 nóżek! Poprawić
 $EndSCHEMATC
