@@ -5,10 +5,10 @@ EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 2
-Title ""
-Date ""
-Rev ""
-Comp ""
+Title "field datalogger"
+Date "2019-04-29"
+Rev "v. 1.0"
+Comp "grzegorz@sapijaszko.net"
 Comment1 ""
 Comment2 ""
 Comment3 ""

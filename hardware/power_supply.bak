@@ -1034,10 +1034,10 @@ PHOTOVOLTAIC CHARGER
 Text Notes 1800 6350 0    50   ~ 0
 LT3105 w obudowie 12 nóżek! Poprawić
 $Comp
-L kicad_libraries:LTC3105 U?
+L kicad_libraries:LTC3105 U8
 U 1 1 5CC770DE
 P 2450 5050
-F 0 "U?" H 2450 5720 50  0000 C CNN
+F 0 "U8" H 2450 5720 50  0000 C CNN
 F 1 "LTC3105" H 2450 5629 50  0000 C CNN
 F 2 "Package_SO:MSOP-12_3x4mm_P0.65mm" H 2100 4100 50  0001 L BNN
 F 3 "https://www.analog.com/media/en/technical-documentation/data-sheets/3105fb.pdf" H 3000 5100 50  0001 L BNN
