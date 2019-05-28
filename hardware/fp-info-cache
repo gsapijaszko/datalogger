@@ -1,4 +1,4 @@
-15573794591324069
+15575352330705846
 Battery
 BatteryHolder_Bulgin_BX0036_1xC
 Bulgin Battery Holder, BX0036, Battery Type C (http://www.bulgin.com/media/bulgin/data/Battery_holders.pdf)
@@ -46957,6 +46957,13 @@ solder jumper open
 3
 kicad_libraries
 1220 Battery Holder, SMD
+
+
+0
+2
+2
+kicad_libraries
+AA Battery Holder, Keystone 1028_C238063
 
 
 0
