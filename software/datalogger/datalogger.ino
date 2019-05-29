@@ -20,6 +20,24 @@ const uint8_t chipSelect = 10; //sd card chip select
 
 #include <DS3232RTC.h>      // https://github.com/JChristensen/DS3232RTC
 
+// BH1750 lightmeter
+#include <BH1750.h>
+BH1750 lightMeter;
+
+#include <BME280I2C.h>      // https://github.com/finitespace/BME280
+
+BME280I2C::Settings settings(
+   BME280::OSR_X1,
+   BME280::OSR_X1,
+   BME280::OSR_X1,
+   BME280::Mode_Forced,
+   BME280::StandbyTime_1000ms,
+   BME280::Filter_Off,
+   BME280::SpiEnable_False,
+   0x76 // I2C address. I2C specific.
+);
+
+BME280I2C bme(settings);
 
 //DS3231 RTC variables
 //====================
@@ -51,9 +69,7 @@ void setup() {
     digitalWrite(RTC_VCC_PIN, HIGH); // driving this high supplies power to the RTC Vcc pin while arduino is awake
   #endif
 
-  #ifdef MY_DEBUG
-    Serial.begin(9600);
-  #endif
+  Serial.begin(9600);
 
     setSyncProvider(RTC.get);   // the function to get the time from the RTC
     Serial.print(F("RTC sync "));
@@ -83,6 +99,20 @@ void setup() {
   pinMode(ENABLE, OUTPUT);
   digitalWrite(ENABLE, HIGH);
   //pinMode(BATTERY_SENSE_PIN, INPUT);
+
+  // light meter start
+  lightMeter.begin();
+  
+  // BME280
+  while(!bme.begin())
+  {
+    #ifdef MY_DEBUG
+      Serial.println("Could not find BME280I2C sensor!");
+    #endif
+    // dodać miganie diodkami 
+    delay(1000);
+  }
+  
 }
 
 void loop()
@@ -91,7 +121,8 @@ void loop()
     delay(50);
     time_t t = RTC.get();
     digitalWrite(RTC_VCC_PIN, LOW);
-    
+
+    Serial.println("\n\n");
     char buf[25];
         sprintf(buf, "%.4d-%.2d-%.2d %.2d:%.2d:%.2d",
             year(t), month(t), day(t), hour(t), minute(t), second(t));
@@ -104,7 +135,7 @@ void loop()
     Serial.print(batVolt/1000);
     Serial.print(".");
     Serial.print(batVolt%1000);
-    Serial.println(" V");
+    Serial.print(" V\t\t");
     
     int Vcc = readVcc();
     Serial.print("Vcc = ");
@@ -113,11 +144,49 @@ void loop()
     Serial.print(Vcc%1000);
     Serial.println(" V");
 
-    delay(5000);
+    lightMeter.configure(BH1750_POWER_ON);
+    lightMeter.configure(BH1750_ONE_TIME_LOW_RES_MODE);
+    uint16_t lux = lightMeter.readLightLevel();
+    lightMeter.configure(BH1750_POWER_DOWN);
+    
+    Serial.print("Light: ");
+    Serial.print(lux);
+    Serial.println(" lx");
+
+  // BME280
+  settings.mode = BME280::Mode_Forced;
+  bme.setSettings(settings);
+  
+  printBME280Data(&Serial);
+  
+  settings.mode = BME280::Mode_Sleep;
+  bme.setSettings(settings);
+
+    delay(10000);
     
 }
 
+void printBME280Data (Stream* client)
+{
+   float temp(NAN), hum(NAN), pres(NAN);
 
+   BME280::TempUnit tempUnit(BME280::TempUnit_Celsius);
+   BME280::PresUnit presUnit(BME280::PresUnit_hPa);
+
+   bme.read(pres, temp, hum, tempUnit, presUnit);
+
+   client->print("Temp: ");
+   client->print(temp);
+   client->print("°"+ String(tempUnit == BME280::TempUnit_Celsius ? 'C' :'F'));
+   client->print("\t\tHumidity: ");
+   client->print(hum);
+   client->print("% RH");
+   client->print("\t\tPressure: ");
+   client->print(pres);
+   client->println(" hPa");
+
+//   delay(1000);
+}
 
 
 long getBatteryVoltage() {
