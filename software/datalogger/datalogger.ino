@@ -19,6 +19,16 @@ const uint8_t chipSelect = 10; //sd card chip select
 // eg: LowPower.powerDown(SLEEP_15Ms, ADC_OFF, BOD_OFF); use SLEEP_FOREVER with hardware interrupts
 
 #include <DS3232RTC.h>      // https://github.com/JChristensen/DS3232RTC
+//DS3231 RTC variables
+//====================
+#define RTC_VCC_PIN 5               // Assumes you are powering your DS3231 RTC from this pin. Even if you are not, it is harmless to leave this in unless you have something else connected to digital pin 7. 
+////When the arduino is awake, power the rtc from this pin (70uA), when arduino sleeps pin set low & rtc runs on battery at <3uA
+// #define DS3231_ADDRESS     0x68      //=104 dec
+// #define DS3231_STATUS_REG  0x0F
+// #define DS3231_CONTROL_REG 0x0E
+// #define DS3231_TMP_UP_REG  0x11
+
+
 
 // BH1750 lightmeter
 #include <BH1750.h>
@@ -39,15 +49,6 @@ BME280I2C::Settings settings(
 
 BME280I2C bme(settings);
 
-//DS3231 RTC variables
-//====================
-#define RTC_VCC_PIN 5               // Assumes you are powering your DS3231 RTC from this pin. Even if you are not, it is harmless to leave this in unless you have something else connected to digital pin 7. 
-////When the arduino is awake, power the rtc from this pin (70uA), when arduino sleeps pin set low & rtc runs on battery at <3uA
-#define DS3231_ADDRESS     0x68      //=104 dec
-#define DS3231_STATUS_REG  0x0F
-#define DS3231_CONTROL_REG 0x0E
-#define DS3231_TMP_UP_REG  0x11
-
 // Enable debug prints to serial monitor
 #define MY_DEBUG
 
@@ -63,20 +64,45 @@ BME280I2C bme(settings);
 #define ENABLE A1
 #define BATTERY_SENSE_PIN A0
 
+#define SampleIntervalMinutes 1 //15              // Allowed values: 1,2,3,5,10,15,20 or 30, -MUST be a number that divides equally into 60! Time aligns to hour rollover no matter when unit is started
+#define SampleIntervalSeconds 0              // 1Hz is maximum possible rate of recording discrete time stamped records with this logger!: 
+
+uint8_t Alarmday = 1;
+uint8_t Alarmhour = 1;
+uint8_t Alarmminute = 1;
+uint8_t Alarmsecond = 1; 
+
+boolean midnightRollover = true;     // flag that triggers the saving ONCE per day data
+
+
 void setup() {
   #ifdef RTC_VCC_PIN
     pinMode(RTC_VCC_PIN, OUTPUT);// IF you are pin-powering the chip:
     digitalWrite(RTC_VCC_PIN, HIGH); // driving this high supplies power to the RTC Vcc pin while arduino is awake
   #endif
+  // initialize the alarms to known values, clear the alarm flags, clear the alarm interrupt flags
+  RTC.setAlarm(ALM1_MATCH_DATE, 0, 0, 0, 1);
+  RTC.setAlarm(ALM2_MATCH_DATE, 0, 0, 0, 1);
+  RTC.alarm(ALARM_1);
+  RTC.alarm(ALARM_2);
+  RTC.alarmInterrupt(ALARM_1, false);
+  RTC.alarmInterrupt(ALARM_2, false);
+  RTC.squareWave(SQWAVE_NONE); 
 
-  Serial.begin(9600);
+  pinMode(INT_SQW, INPUT_PULLUP);
+  attachInterrupt(INT0, alarmIsr, FALLING);
 
-    setSyncProvider(RTC.get);   // the function to get the time from the RTC
+  #ifdef MY_DEBUG
+    Serial.begin(9600);
+  #endif
+  setSyncProvider(RTC.get);   // the function to get the time from the RTC
+  #ifdef MY_DEBUG
     Serial.print(F("RTC sync "));
     if (timeStatus() == timeSet)
         Serial.println(F("OK"));
     else
         Serial.println(F("FAIL!"));
+  #endif
 
   //turn on internal pullups for three SPI lines to help some SD cards go to sleep faster
   pinMode(chipSelect, OUTPUT);
@@ -88,13 +114,9 @@ void setup() {
   // NOTE: In Mode (0), the SPI interface holds the CLK line low when the bus is inactive, so DO NOT put a pullup on it.
   // NOTE: when the SPI interface is active, digitalWrite() cannot effect MISO,MOSI,CS or CLK
 
-  pinMode(RED_PIN, OUTPUT);
-  digitalWrite(RED_PIN, HIGH);     // used for error state, SD card writes & low voltage warning
-  pinMode(GREEN_PIN, OUTPUT);
-  digitalWrite(GREEN_PIN, LOW);  // indicates sensor reading
-  pinMode(BLUE_PIN, OUTPUT);
-  digitalWrite(BLUE_PIN, LOW);    // eeprom writes & early low voltage warning
-
+  pinMode(RED_PIN, OUTPUT);      // used for error state, SD card writes & low voltage warning
+  pinMode(GREEN_PIN, OUTPUT);     // indicates sensor reading
+  pinMode(BLUE_PIN, OUTPUT);      // eeprom writes & early low voltage warning
 
   pinMode(ENABLE, OUTPUT);
   digitalWrite(ENABLE, HIGH);
@@ -109,61 +131,151 @@ void setup() {
     #ifdef MY_DEBUG
       Serial.println("Could not find BME280I2C sensor!");
     #endif
-    // dodać miganie diodkami 
+    blinkDiode(RED_PIN, 3);
     delay(1000);
   }
-  
+
+  // just a couple of blinks for the end of setup
+  blinkDiode(RED_PIN, 2);
+  blinkDiode(GREEN_PIN, 2);
+  blinkDiode(BLUE_PIN, 2);  
+
+    RTC.setAlarm(ALM1_MATCH_SECONDS, 20, 0, 0, 1);  // daydate parameter should be between 1 and 7
+    RTC.alarm(ALARM_1);                   // ensure RTC interrupt flag is cleared
+    RTC.alarmInterrupt(ALARM_1, true); 
+
 }
+
+volatile boolean alarmIsrWasCalled = false;
+
+void alarmIsr()
+{
+    alarmIsrWasCalled = true;
+} 
 
 void loop()
 {
-    digitalWrite(RTC_VCC_PIN, HIGH);
-    delay(50);
-    time_t t = RTC.get();
-    digitalWrite(RTC_VCC_PIN, LOW);
 
-    Serial.println("\n\n");
-    char buf[25];
-        sprintf(buf, "%.4d-%.2d-%.2d %.2d:%.2d:%.2d",
-            year(t), month(t), day(t), hour(t), minute(t), second(t));
-        Serial.println(buf);
-
-    int batVolt = getBatteryVoltage();
-    Serial.print("Battery voltage: ");
-    Serial.print(batVolt);
-    Serial.print("   ");
-    Serial.print(batVolt/1000);
-    Serial.print(".");
-    Serial.print(batVolt%1000);
-    Serial.print(" V\t\t");
-    
-    int Vcc = readVcc();
-    Serial.print("Vcc = ");
-    Serial.print(Vcc/1000);
-    Serial.print(".");
-    Serial.print(Vcc%1000);
-    Serial.println(" V");
 
     lightMeter.configure(BH1750_POWER_ON);
     lightMeter.configure(BH1750_ONE_TIME_LOW_RES_MODE);
     uint16_t lux = lightMeter.readLightLevel();
     lightMeter.configure(BH1750_POWER_DOWN);
-    
-    Serial.print("Light: ");
-    Serial.print(lux);
-    Serial.println(" lx");
-
+    #ifdef MY_DEBUG
+      Serial.print("Light: ");
+      Serial.print(lux);
+      Serial.println(" lx");
+    #endif
   // BME280
   settings.mode = BME280::Mode_Forced;
   bme.setSettings(settings);
-  
-  printBME280Data(&Serial);
-  
+  #ifdef MY_DEBUG  
+    printBME280Data(&Serial);
+  #endif
   settings.mode = BME280::Mode_Sleep;
   bme.setSettings(settings);
 
-    delay(10000);
+  if (alarmIsrWasCalled) { 
     
+    Serial.println("Tu cos po alarmie");
+    
+    digitalWrite(RTC_VCC_PIN, HIGH);
+    delay(50);
+    time_t t = RTC.get();
+    digitalWrite(RTC_VCC_PIN, LOW);
+
+    RTC.alarm(ALARM_1);
+    char buf[25];
+        sprintf(buf, "%.4d-%.2d-%.2d %.2d:%.2d:%.2d",
+            year(t), month(t), day(t), hour(t), minute(t), second(t));
+        #ifdef MY_DEBUG
+          Serial.println(buf);
+        #endif
+    Alarmhour = hour(t); 
+    Alarmminute = minute(t) + SampleIntervalMinutes;
+    // Make sure your sensor readings don't take longer than your sample interval or you pass your next alarm time & clock fails!
+    Alarmday = day(t); 
+    Alarmsecond = second(t) + SampleIntervalSeconds; //only used for special testing & debugging runs - ignored unless SampleIntervalMinutes=0
+
+    // Check for RTC TIME ROLLOVERS: THEN SET the next RTC alarm and go back to sleep
+    //============================================================================
+if (SampleIntervalMinutes > 0) //then our alarm is in (SampleInterval) minutes
+    {
+      if (Alarmminute > 59) {  //error catch - if alarmminute=60 the interrupt never triggers due to rollover!
+        Alarmminute = 0;
+        Alarmhour = Alarmhour + 1;
+        if (Alarmhour > 23) {
+          Alarmhour = 0;
+          midnightRollover = true;
+        }
+      }  //terminator for if (Alarmminute > 59) rollover catching
+
+    RTC.setAlarm(ALM1_MATCH_HOURS, Alarmsecond, Alarmminute, Alarmhour, 0);
+    }  //terminator for if (SampleIntervalMinutes > 0)
+
+else  //to get sub-minute alarms use the full setA1time function
+    
+    {  // for testing & debug I sometimes want the alarms more frequent than 1 per minute.
+      if (Alarmsecond >59){
+        Alarmsecond =0;
+        Alarmminute = Alarmminute+1;  
+        if (Alarmminute > 59) 
+        {  //error catch - if alarmminute=60 the interrupt never triggers due to rollover!
+          Alarmminute =0; 
+          Alarmhour = Alarmhour+1; 
+          if (Alarmhour > 23) { //uhoh a day rollover, but we dont know the month..so we dont know the next day number?
+            Alarmhour =0; 
+            midnightRollover = true;      
+             // sleep for a total of 64 seconds (12 x 8s) to force day "rollover" while we are in this loop
+             // this causes a small gap in the timing once per day, but I only use sub minute sampling for debugging anyway.
+             for (int j = 0; j <12; j++){
+                LowPower.powerDown(SLEEP_8S, ADC_OFF, BOD_OFF); 
+             }
+             Alarmday = day(t);
+             Alarmhour = hour(t);
+             Alarmminute = minute(t);
+             Alarmsecond = second(t) + SampleIntervalSeconds;
+             RTC.setAlarm(ALM1_MATCH_HOURS, Alarmsecond, Alarmminute, Alarmhour, 0);
+          }
+        }
+      }
+      
+      //The sample interval must ALWAYS be greater than the time to acquire samples and flush eeprom buffer data to the SD PLUS ~1 second for SD write latency
+      // ====>>> RTC_DS3231_setA1Time(Alarmday, Alarmhour, Alarmminute, Alarmsecond, 0b00001000, false, false, false);  
+      //The variables ALRM1_SET bits and ALRM2_SET are 0b1000 and 0b111 respectively.
+      //RTC_DS3231_setA1Time(byte A1Day, byte A1Hour, byte A1Minute, byte A1Second, byte AlarmBits, bool A1Dy, bool A1h12, bool A1PM)
+    } // terminator for second else case of if (SampleIntervalMinutes > 0) 
+
+
+    Serial.print("Next Alarm: dzień: ");Serial.print(Alarmday);Serial.print(", godzina: ");Serial.print(Alarmhour);Serial.print(", minuta: ");Serial.print(Alarmminute);Serial.print(", sek: ");Serial.println(Alarmsecond);
+    RTC.alarm(ALARM_1);                   // ensure RTC interrupt flag is cleared
+    RTC.alarmInterrupt(ALARM_1, true); 
+
+    int batVolt = getBatteryVoltage();
+    #ifdef MY_DEBUG
+      Serial.print("Battery voltage: ");
+      Serial.print(batVolt);
+      Serial.print("   ");
+      Serial.print(batVolt/1000);
+      Serial.print(".");
+      Serial.print(batVolt%1000);
+      Serial.print(" V\t\t");
+    #endif
+    int Vcc = readVcc();
+    #ifdef MY_DEBUG
+      Serial.print("Vcc = ");
+      Serial.print(Vcc/1000);
+      Serial.print(".");
+      Serial.print(Vcc%1000);
+      Serial.println(" V");
+    #endif
+
+
+    alarmIsrWasCalled = false; 
+  }
+
+
+  delay(5000);
 }
 
 void printBME280Data (Stream* client)
@@ -227,4 +339,13 @@ long readVcc() {
    
     result = 1125300L / result; // Calculate Vcc (in mV); 1125300 = 1.1*1023*1000
     return result; // Vcc in millivolts
+  }
+
+  void blinkDiode(int pin, int times) {
+    for (int i = 1; i<=times; i++) {
+      digitalWrite(pin, HIGH);     
+      delay(200);
+      digitalWrite(pin, LOW);
+      delay(300);
+    }
   }
