@@ -74,6 +74,7 @@ uint8_t Alarmsecond = 1;
 
 boolean midnightRollover = true;     // flag that triggers the saving ONCE per day data
 
+time_t teraz = 0;
 
 void setup() {
   #ifdef RTC_VCC_PIN
@@ -155,35 +156,14 @@ void alarmIsr()
 
 void loop()
 {
-
-
-    lightMeter.configure(BH1750_POWER_ON);
-    lightMeter.configure(BH1750_ONE_TIME_LOW_RES_MODE);
-    uint16_t lux = lightMeter.readLightLevel();
-    lightMeter.configure(BH1750_POWER_DOWN);
-    #ifdef MY_DEBUG
-      Serial.print("Light: ");
-      Serial.print(lux);
-      Serial.println(" lx");
-    #endif
-  // BME280
-  settings.mode = BME280::Mode_Forced;
-  bme.setSettings(settings);
-  #ifdef MY_DEBUG  
-    printBME280Data(&Serial);
-  #endif
-  settings.mode = BME280::Mode_Sleep;
-  bme.setSettings(settings);
-
   if (alarmIsrWasCalled) { 
-    
-    Serial.println("Tu cos po alarmie");
+    Serial.println(F("\n"));
+    // Serial.println(F("Alarm! Alarm!"));
     
     digitalWrite(RTC_VCC_PIN, HIGH);
+    LowPower.powerDown(SLEEP_15MS, ADC_ON, BOD_ON);  //note the ADC is left for this cap stabilization period
     delay(50);
     time_t t = RTC.get();
-    digitalWrite(RTC_VCC_PIN, LOW);
-
     RTC.alarm(ALARM_1);
     char buf[25];
         sprintf(buf, "%.4d-%.2d-%.2d %.2d:%.2d:%.2d",
@@ -199,58 +179,59 @@ void loop()
 
     // Check for RTC TIME ROLLOVERS: THEN SET the next RTC alarm and go back to sleep
     //============================================================================
-if (SampleIntervalMinutes > 0) //then our alarm is in (SampleInterval) minutes
-    {
-      if (Alarmminute > 59) {  //error catch - if alarmminute=60 the interrupt never triggers due to rollover!
-        Alarmminute = 0;
-        Alarmhour = Alarmhour + 1;
-        if (Alarmhour > 23) {
-          Alarmhour = 0;
-          midnightRollover = true;
-        }
-      }  //terminator for if (Alarmminute > 59) rollover catching
-
-    RTC.setAlarm(ALM1_MATCH_HOURS, Alarmsecond, Alarmminute, Alarmhour, 0);
-    }  //terminator for if (SampleIntervalMinutes > 0)
-
-else  //to get sub-minute alarms use the full setA1time function
+    if (SampleIntervalMinutes > 0) //then our alarm is in (SampleInterval) minutes
+        {
+          if (Alarmminute > 59) {  //error catch - if alarmminute=60 the interrupt never triggers due to rollover!
+            Alarmminute = 0;
+            Alarmhour = Alarmhour + 1;
+            if (Alarmhour > 23) {
+              Alarmhour = 0;
+              midnightRollover = true;
+            }
+          }  //terminator for if (Alarmminute > 59) rollover catching
     
-    {  // for testing & debug I sometimes want the alarms more frequent than 1 per minute.
-      if (Alarmsecond >59){
-        Alarmsecond =0;
-        Alarmminute = Alarmminute+1;  
-        if (Alarmminute > 59) 
-        {  //error catch - if alarmminute=60 the interrupt never triggers due to rollover!
-          Alarmminute =0; 
-          Alarmhour = Alarmhour+1; 
-          if (Alarmhour > 23) { //uhoh a day rollover, but we dont know the month..so we dont know the next day number?
-            Alarmhour =0; 
-            midnightRollover = true;      
-             // sleep for a total of 64 seconds (12 x 8s) to force day "rollover" while we are in this loop
-             // this causes a small gap in the timing once per day, but I only use sub minute sampling for debugging anyway.
-             for (int j = 0; j <12; j++){
-                LowPower.powerDown(SLEEP_8S, ADC_OFF, BOD_OFF); 
-             }
-             Alarmday = day(t);
-             Alarmhour = hour(t);
-             Alarmminute = minute(t);
-             Alarmsecond = second(t) + SampleIntervalSeconds;
-             RTC.setAlarm(ALM1_MATCH_HOURS, Alarmsecond, Alarmminute, Alarmhour, 0);
+        }  //terminator for if (SampleIntervalMinutes > 0)
+    
+    else  //to get sub-minute alarms use the full setA1time function
+        
+        {  // for testing & debug I sometimes want the alarms more frequent than 1 per minute.
+          if (Alarmsecond >59){
+            Alarmsecond =0;
+            Alarmminute = Alarmminute+1;  
+            if (Alarmminute > 59) 
+            {  //error catch - if alarmminute=60 the interrupt never triggers due to rollover!
+              Alarmminute =0; 
+              Alarmhour = Alarmhour+1; 
+              if (Alarmhour > 23) { //uhoh a day rollover, but we dont know the month..so we dont know the next day number?
+                Alarmhour =0; 
+                midnightRollover = true;      
+                 // sleep for a total of 64 seconds (12 x 8s) to force day "rollover" while we are in this loop
+                 // this causes a small gap in the timing once per day, but I only use sub minute sampling for debugging anyway.
+                 for (int j = 0; j <12; j++){
+                    LowPower.powerDown(SLEEP_8S, ADC_OFF, BOD_OFF); 
+                 }
+                 Alarmday = day(t);
+                 Alarmhour = hour(t);
+                 Alarmminute = minute(t);
+                 Alarmsecond = second(t) + SampleIntervalSeconds;
+              }
+            }
           }
-        }
-      }
-      
-      //The sample interval must ALWAYS be greater than the time to acquire samples and flush eeprom buffer data to the SD PLUS ~1 second for SD write latency
-      // ====>>> RTC_DS3231_setA1Time(Alarmday, Alarmhour, Alarmminute, Alarmsecond, 0b00001000, false, false, false);  
-      //The variables ALRM1_SET bits and ALRM2_SET are 0b1000 and 0b111 respectively.
-      //RTC_DS3231_setA1Time(byte A1Day, byte A1Hour, byte A1Minute, byte A1Second, byte AlarmBits, bool A1Dy, bool A1h12, bool A1PM)
+          
+          //The sample interval must ALWAYS be greater than the time to acquire samples and flush eeprom buffer data to the SD PLUS ~1 second for SD write latency
+          // ====>>> RTC_DS3231_setA1Time(Alarmday, Alarmhour, Alarmminute, Alarmsecond, 0b00001000, false, false, false);  
+          //The variables ALRM1_SET bits and ALRM2_SET are 0b1000 and 0b111 respectively.
+          //RTC_DS3231_setA1Time(byte A1Day, byte A1Hour, byte A1Minute, byte A1Second, byte AlarmBits, bool A1Dy, bool A1h12, bool A1PM)
     } // terminator for second else case of if (SampleIntervalMinutes > 0) 
 
 
-    Serial.print("Next Alarm: dzień: ");Serial.print(Alarmday);Serial.print(", godzina: ");Serial.print(Alarmhour);Serial.print(", minuta: ");Serial.print(Alarmminute);Serial.print(", sek: ");Serial.println(Alarmsecond);
+    // Serial.print("Next Alarm: dzień: ");Serial.print(Alarmday);Serial.print(", godzina: ");Serial.print(Alarmhour);Serial.print(", minuta: ");Serial.print(Alarmminute);Serial.print(", sek: ");Serial.println(Alarmsecond);
+    RTC.setAlarm(ALM1_MATCH_HOURS, Alarmsecond, Alarmminute, Alarmhour, 0);
     RTC.alarm(ALARM_1);                   // ensure RTC interrupt flag is cleared
     RTC.alarmInterrupt(ALARM_1, true); 
-
+    delay(50);
+    digitalWrite(RTC_VCC_PIN, LOW);
+  
     int batVolt = getBatteryVoltage();
     #ifdef MY_DEBUG
       Serial.print("Battery voltage: ");
@@ -270,12 +251,73 @@ else  //to get sub-minute alarms use the full setA1time function
       Serial.println(" V");
     #endif
 
+      char buffer[6];
+      PString str(buffer, sizeof(buffer));
+      uint16_t luxa = getLightLevel();
+
+      if (luxa < 10000) {
+        str.print (F("0"));
+      } 
+      if (luxa < 1000) {
+        str.print (F("0"));
+      } 
+      if (luxa < 100) {
+        str.print (F("0"));
+      } 
+      if( luxa < 10 ) {
+        str.print (F("0"));
+      } 
+      str.print(luxa);
+
+      Serial.print("Light: "); Serial.print(luxa); Serial.print(F("  ")); Serial.println(str);
+    
+    // delay(200);
 
     alarmIsrWasCalled = false; 
   }
+  else {
+   LowPower.powerDown(SLEEP_FOREVER, ADC_OFF, BOD_OFF);
+   // tuStandard();
+ 
+  } // end of else
+}
 
+void tuStandard() {
+   digitalWrite(RTC_VCC_PIN, HIGH);
+    delay(50);
+    time_t t = RTC.get();
+    if (t - teraz >= 17) {
+      RTC.alarm(ALARM_1);
+      char buf[25];
+          sprintf(buf, "%.4d-%.2d-%.2d %.2d:%.2d:%.2d",
+              year(t), month(t), day(t), hour(t), minute(t), second(t));
+          #ifdef MY_DEBUG
+            Serial.println(buf);
+          #endif
+    digitalWrite(RTC_VCC_PIN, LOW);
+    delay(50);
+  
+  
+  
+    // BME280
+    settings.mode = BME280::Mode_Forced;
+    bme.setSettings(settings);
+    delay(50);
+    #ifdef MY_DEBUG  
+      printBME280Data(&Serial);
+    #endif
+    settings.mode = BME280::Mode_Sleep;
+    bme.setSettings(settings);
+    teraz = t;
+    } // end if t-teraz
+}
 
-  delay(5000);
+uint16_t getLightLevel() {
+  lightMeter.configure(BH1750_POWER_ON);
+  lightMeter.configure(BH1750_ONE_TIME_LOW_RES_MODE);
+  uint16_t lux = lightMeter.readLightLevel();
+  lightMeter.configure(BH1750_POWER_DOWN);
+  return lux;
 }
 
 void printBME280Data (Stream* client)
@@ -303,8 +345,8 @@ void printBME280Data (Stream* client)
 
 long getBatteryVoltage() {
   digitalWrite(ENABLE, HIGH);
+//  LowPower.powerDown(SLEEP_30MS, ADC_ON, BOD_ON);  //note the ADC is left for this cap stabilization period
   delay(50);
-  
   int batterySenseValue = analogRead(BATTERY_SENSE_PIN);
   digitalWrite(ENABLE, LOW);
   // (330e3+100e3)/100e3 - resistors divider

@@ -26,8 +26,8 @@ void setup() {
     Serial.begin(9600);
 
     Serial.println(F("\n" __FILE__ " " __DATE__ " " __TIME__));
-//    setTime(19, 42, 30, 27, 5, 2019); 
-//    RTC.set(now());
+    setTime(11, 55, 00, 4, 6, 2019); 
+    RTC.set(now());
     setSyncProvider(RTC.get);   // the function to get the time from the RTC
     Serial.print(F("RTC sync "));
     if (timeStatus() == timeSet)
