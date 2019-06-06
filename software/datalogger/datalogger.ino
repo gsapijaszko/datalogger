@@ -44,9 +44,9 @@ BME280I2C bme(settings);
 
 // I2C EEPROM, 24C64 - 64 Kbit, 8 Kbyte, page size: 32 byte
 // One 24C64 EEPROMs on the bus
-const uint32_t totalKBytes = 8;        //for read and write test functions
+const uint32_t totalKBytes = 2;        //for read and write test functions
 #include "extEEPROM.h"
-extEEPROM logEEPROM(kbits_64, 1, 32);     //device size, number of devices, page size
+extEEPROM logEEPROM(kbits_16, 1, 32);     //device size, number of devices, page size
 #define EEpromPageSize 32                 // 32 bytes is page size for the AT24C32 & AT24C256 - can't move more than 30 bytes with wire.h anyway
 unsigned long CurrentEEpromMemAddress = 0;     // set to zero at the start of each cycle - must increment by steps of 32
 uint16_t RolloverEEpMemAddress = 0;       // only used on midnight rollover
