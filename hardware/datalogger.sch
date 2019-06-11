@@ -1,6 +1,5 @@
 EESchema Schematic File Version 4
 LIBS:datalogger-cache
-LIBS:RTRatuj-cache
 LIBS:power_supply-cache
 EELAYER 29 0
 EELAYER END
@@ -8,8 +7,8 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 2
 Title "field datalogger"
-Date "2019-06-06"
-Rev "v. 1.1"
+Date "2019-04-29"
+Rev "v. 1.0"
 Comp "grzegorz@sapijaszko.net"
 Comment1 ""
 Comment2 ""
